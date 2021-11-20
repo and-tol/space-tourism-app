@@ -1,3 +1,4 @@
+import '../styles/design-token.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Meta } from '../layout'
