@@ -1,5 +1,7 @@
 :root {
-  --black: #0B0D17;
-  --white: #FFFFFF;
-  --tropical-blue: #D0D6F9;
+  --black: #0b0d17;
+  --white: #ffffff;
+  --tropical-blue: #d0d6f9;
+  --main-text-color: var(--white);
+  --second-color: var(--tropical-blue);
 }

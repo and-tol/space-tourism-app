@@ -1,19 +1,19 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import { Hero } from '../components/Hero/Hero';
+// import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
+    <>
+      {/* <main > */}
+        <Hero />
 
+      {/* </main> */}
 
-      </main>
+      <footer>
 
-      <footer className={styles.footer}>
-       
       </footer>
-    </div>
+    </>
   );
 };
 
