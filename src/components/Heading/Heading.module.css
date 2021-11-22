@@ -1,0 +1,42 @@
+.h1 {
+  font-family: Bellefair, serif;
+  font-size: 150px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h2 {
+  font-family: Bellefair, serif;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h3 {
+  font-family: Bellefair, serif;
+  font-size: 56px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.h4 {
+  font-family: Bellefair, serif;
+  font-size: 32px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+  letter-spacing: 4.725px;
+
+  color: var(--second-color);
+  font-weight: 400;
+}
