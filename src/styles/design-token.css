@@ -4,4 +4,13 @@
   --tropical-blue: #d0d6f9;
   --main-text-color: var(--white);
   --second-color: var(--tropical-blue);
+
+  --tablet: 769px;
+  --tablet-iPad: 810px;
+  --mobile-iPone: 375px;
+  --mobile: 412px;
+}
+
+@media (max-width: 810px) {
+  :root {}
 }

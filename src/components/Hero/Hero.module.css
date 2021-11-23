@@ -46,6 +46,7 @@
   font-size: 32px;
   line-height: 100%;
   text-transform: uppercase;
+  text-align: center;
 
   background-color: var(--white);
 
@@ -61,7 +62,7 @@
   width: 270px;
   height: 270px;
   box-shadow: 0 0 0 88px rgb(255 255 255 / 10%);
-  transition: all .65s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 0.65s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 /* --------- */
@@ -69,4 +70,68 @@
 .pic {
   object-fit: cover;
   min-height: 0;
+}
+
+@media (max-width: 810px) {
+  .content {
+    grid-template-columns: 1fr;
+    align-content: end;
+    justify-content: stretch;
+  }
+  .text {
+    justify-self: center;
+  }
+
+  .subtitle,
+  .title,
+  .info {
+    text-align: center;
+  }
+
+  .info {
+    max-width: 444px;
+  }
+
+  .button {
+    align-self: end;
+    justify-self: center;
+
+    width: 242px;
+    height: 242px;
+    border-radius: 242px;
+
+    margin-bottom: 8vh;
+
+    letter-spacing: 2px;
+  }
+
+  .button:focus,
+.button:hover,
+.button:active {
+  width: 238px;
+  height: 238px;
+  box-shadow: 0 0 0 60px rgb(255 255 255 / 10%);
+}
+}
+@media (max-width: 412px) {
+  .info {
+    max-width: 100%;
+  }
+  .button {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+
+    margin-bottom: 7vh;
+
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
+    .button:focus,
+.button:hover,
+.button:active {
+  width: 146px;
+  height: 146px;
+  box-shadow: 0 0 0 40px rgb(255 255 255 / 10%);
+}
 }

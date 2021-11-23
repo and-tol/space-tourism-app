@@ -1,4 +1,17 @@
 .p {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.7778rem;
+}
+
+@media (max-width: 810px) {
+  .p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 412px) {
+  .p {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }

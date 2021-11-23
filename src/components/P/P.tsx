@@ -1,14 +1,10 @@
+import cn from 'classnames';
+import styles from './P.module.css';
 import { PProps } from './P.props';
-import styles from './Heading.module.css';
 
-export const Heading = ({
-  children,
-  ...props
-}: PProps): JSX.Element => {
-
-
+export const P = ({ children, className, ...props }: PProps): JSX.Element => {
   return (
-    <p className={styles.p} {...props}>
+    <p className={cn(styles.p, className)} {...props}>
       {children}
     </p>
   );
