@@ -6,3 +6,16 @@
 .wordWrap {
   word-wrap: break-word;
 }
+
+@media (max-width: calc(1116px + 80px)) {
+  .wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 412px) {
+  .wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
