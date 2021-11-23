@@ -11,7 +11,7 @@ export const Hero = (): JSX.Element => {
         <div className={styles.content}>
           <section className={styles.text}>
             <Heading tag='h5'>So, you want to travel to</Heading>
-            <Heading tag='h1' className={styles.title}>
+            <Heading tag='h1' className={cn(styles.title, 'wordWrap')}>
               Space
             </Heading>
             <p>
