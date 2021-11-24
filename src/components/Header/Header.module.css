@@ -4,10 +4,7 @@
   position: fixed;
   z-index: 2;
 
-  /* display: flex; */
-  /* align-items: center; */
-
-  /* padding-left: 55px; */
+  align-items: center;
 
   max-width: var(--width-primary);
 
@@ -15,9 +12,11 @@
   grid-template-columns: 162px auto auto;
   grid-template-rows: 1fr;
   align-content: center;
+
+  margin-top: 40px;
 }
 
-.logoContainer{
+.logoContainer {
   display: flex;
   height: 100%;
   align-items: center;
