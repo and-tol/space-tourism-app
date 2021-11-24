@@ -1,0 +1,35 @@
+.menuItem {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  transition: var(--transition);
+}
+
+.num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin-right: 14px;
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.active {
+  border-bottom: 3px solid var(--white);
+}

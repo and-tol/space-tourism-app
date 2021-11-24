@@ -1,13 +1,16 @@
 .wrapper {
-  max-width: 1116px;
+  max-width: var(--width-primary);
   margin-left: auto;
   margin-right: auto;
+  padding-left: 165px;
+  padding-right: 165px;
 }
 .wordWrap {
   word-wrap: break-word;
 }
 
-@media (max-width: calc(1116px + 80px)) {
+/* --width = 1116px */
+@media (max-width: 1116px) {
   .wrapper {
     padding-left: 40px;
     padding-right: 40px;
