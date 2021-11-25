@@ -1,7 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
 import cn from 'classnames';
-import bgPic from '../../../public/assets/home/background-home-desktop.jpg';
 import styles from './Hero.module.css';
 import { Heading, P } from '..';
 
@@ -26,13 +24,7 @@ export const Hero = (): JSX.Element => {
           </section>
           <button className={styles.button}>explore</button>
         </div>
-        <Image
-          src={bgPic}
-          placeholder='blur'
-          className={styles.pic}
-          alt=''
-          layout='fill'
-        />
+
       </div>
     </>
   );

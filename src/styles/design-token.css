@@ -9,8 +9,14 @@
   --tablet-iPad: 810px;
   --mobile-iPone: 375px;
   --mobile: 412px;
+
+  --width-primary: 1440px;
+  --width-secondary: 1116px;
+
+  --transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 @media (max-width: 810px) {
-  :root {}
+  :root {
+  }
 }
