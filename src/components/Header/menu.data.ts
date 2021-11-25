@@ -1,14 +1,34 @@
 export enum MenuItems {
-  Home = 'Home',
-  Destination = 'Destination',
-  Crew = 'Crew',
-  Technology = 'Technology',
+  home = 'Home',
+  destination = 'Destination',
+  crew = 'Crew',
+  technology = 'Technology',
 }
 type MenuItemsStrings = keyof typeof MenuItems;
 
-export const menuItems = [
-  MenuItems.Home,
-  MenuItems.Destination,
-  MenuItems.Crew,
-  MenuItems.Technology,
+// ---------
+export interface IMenuItems {
+  name: string;
+  url: string;
+}
+
+export interface IMenuItem {
+  [item: string]: string;
+}
+
+export const menuItem: IMenuItem = {
+  home: 'Home',
+  destination: 'Destination',
+  crew: 'Crew',
+  technology: 'Technology',
+};
+
+export const menuItems: IMenuItems[] = [
+  { name: menuItem.home, url: '/' },
+  {
+    name: menuItem.destination,
+    url: `/destination`,
+  },
+  { name: menuItem.crew, url: `/crew` },
+  { name: menuItem.technology, url: `/technology` },
 ];
