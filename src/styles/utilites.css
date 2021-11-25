@@ -12,13 +12,13 @@
 /* --width = 1116px */
 @media (max-width: 1116px) {
   .wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: var(--padding-tablet);
+    padding-right: var(--padding-tablet);
   }
 }
 @media (max-width: 412px) {
   .wrapper {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--padding-mobile);
+    padding-right: var(--padding-mobile);
   }
 }

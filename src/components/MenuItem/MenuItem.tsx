@@ -6,7 +6,7 @@ export const MenuItem = ({
   menuItem,
   idx,
   isNum,
-  className,
+  className = '',
   ...props
 }: MenuItemProps): JSX.Element => {
   return (

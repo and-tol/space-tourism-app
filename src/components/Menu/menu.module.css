@@ -1,7 +1,13 @@
-.nav{
+.nav {
   height: 100%;
+  display: flex;
+  margin-left: 30px;
 }
 
 .itemMargin {
   margin-right: 48px;
+}
+
+.nav > div + div {
+  margin-left: 48px;
 }
