@@ -1,0 +1,11 @@
+import { DetailedHTMLProps, LinkHTMLAttributes } from 'react';
+
+export interface MenuItemProps
+  extends DetailedHTMLProps<
+    HTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
+  menuItem: string;
+  idx: number;
+  isNum: boolean;
+}
