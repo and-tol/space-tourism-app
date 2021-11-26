@@ -90,3 +90,18 @@
     padding-left: 3vw;
   }
 }
+@media (max-width: 810px) {
+  .line {
+    display: none;
+  }
+  .background {
+    left: 110%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: initial;
+  }
+}
+
