@@ -5,10 +5,10 @@ import styles from './MenuItem.module.css';
 
 export const MenuItem = forwardRef((
   { menuItem, idx, isNum, className = '', ...props }: MenuItemProps,
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLAnchorElement>
 ): JSX.Element => {
   return (
-    <div
+    <a
       className={cn(className, styles.menuItem)}
       key={menuItem}
       {...props}
@@ -16,9 +16,6 @@ export const MenuItem = forwardRef((
     >
       {isNum && <span className={styles.num}>{`0${idx}`}</span>}
       <span className={styles.text}>{menuItem}</span>
-    </div>
+    </a>
   );
 });
-
-
-MenuItem.displayName = "MenuItem"

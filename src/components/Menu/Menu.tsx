@@ -16,7 +16,6 @@ export const Menu = ({ menuItems, isNum }: MenuProps): JSX.Element => {
               menuItem={name}
               idx={idx}
               isNum={isNum}
-              // className={styles.itemMargin}
             />
           </Link>
         );
