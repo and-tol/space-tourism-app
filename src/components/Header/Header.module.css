@@ -89,10 +89,6 @@
   .headerDecoration {
     padding-left: 3vw;
   }
-
-  .menuContainer {
-    display: none;
-  }
 }
 
 @media (max-width: 810px) {
@@ -102,9 +98,15 @@
   .background {
     left: 110%;
   }
+  .header {
+    margin-top: initial;
+  }
 }
 
 @media (max-width: 768px) {
+  .menuContainer {
+    display: none;
+  }
   .header {
     margin-top: initial;
   }
