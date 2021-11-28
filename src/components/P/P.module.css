@@ -7,11 +7,15 @@
   .p {
     font-size: 16px;
     line-height: 28px;
+
+    transition: var(--transition);
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 500px) {
   .p {
     font-size: 15px;
     line-height: 25px;
+
+    transition: var(--transition);
   }
 }
