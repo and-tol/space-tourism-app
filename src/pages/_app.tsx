@@ -4,12 +4,18 @@ import '../styles/utilites.css'
 
 import type { AppProps } from 'next/app'
 import { Meta } from '../layout'
+import React from 'react'
+import { AppContextProvider, IMenuContext } from '../context/app.context'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <>
-    <Meta />
-    <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps & IMenuContext) {
+  return (
+    <>
+      <Meta />
+      <AppContextProvider isMobileMenuView={false}>
+        <Component {...pageProps} />
+      </AppContextProvider>
     </>
+  );
 }
 
 export default MyApp
