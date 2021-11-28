@@ -2,12 +2,10 @@ import { createContext, PropsWithChildren, useContext, useState } from 'react';
 
 export interface IMenuContext {
   isMobileMenuView: boolean;
-  setMobileMenuView?(): void;
+  setMobileMenuView(): void;
 }
 
-export const MenuContext = createContext<IMenuContext>({
-  isMobileMenuView: false,
-});
+export const MenuContext = createContext<IMenuContext>(undefined!);
 
 export const AppContextProvider = ({
   isMobileMenuView,

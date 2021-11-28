@@ -11,7 +11,7 @@ export const MobileMenuToggle = ({
   const [isShowBurger, setIsShowBurger] = useState<boolean>(true);
 
   const toggleMenu = () => {
-    setIsView();
+    setIsView && setIsView();
     setIsShowBurger(!isShowBurger);
   };
 
