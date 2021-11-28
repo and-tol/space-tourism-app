@@ -1,11 +1,10 @@
 .mobMenuCloseContainer {
+  display: none;
   width: 100%;
   position: relative;
-  display: flex;
+  display: none;
   justify-content: right;
   z-index: 4;
-
-  /* margin-bottom: 65px; */
 }
 
 .mobMenuClose {
@@ -19,8 +18,8 @@
   cursor: pointer;
 }
 
-/* @media (max-width: 1116px) {
+@media (max-width: 810px) {
   .mobMenuCloseContainer {
-    margin-bottom: initial;
+    display: flex;
   }
-} */
+}
