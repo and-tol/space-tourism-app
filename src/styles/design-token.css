@@ -8,7 +8,8 @@
   --tablet: 769px;
   --tablet-iPad: 810px;
   --mobile-iPone: 375px;
-  --mobile: 412px;
+  /* --mobile: 412px; */
+  --mobile: 500px;
   --mobile-l: 600px;
 
   --width-primary: 1440px;
@@ -18,6 +19,8 @@
 
   --padding-tablet: 40px;
   --padding-mobile: 24px;
+
+  --header-height: 96px;
 }
 
 @media (max-width: 810px) {

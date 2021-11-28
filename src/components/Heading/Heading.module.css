@@ -46,16 +46,19 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 3.375px;
+    transition: var(--transition);
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 500px) {
   .h1 {
     font-size: 80px;
     line-height: 100px;
+    transition: var(--transition);
   }
   .h5 {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 2.7px;
+    transition: var(--transition);
   }
 }

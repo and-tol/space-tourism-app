@@ -3,7 +3,7 @@ import Link from 'next/link';
 import cn from 'classnames';
 import { MenuItem } from '..';
 import { MenuProps } from './Menu.props';
-import styles from './menu.module.css';
+import styles from './Menu.module.css';
 
 export const Menu = ({ menuItems, isNum }: MenuProps): JSX.Element => {
   return (

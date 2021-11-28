@@ -36,7 +36,17 @@
     line-height: 17px;
     letter-spacing: 2.3625px;
   }
-  .num{
+  .num {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .menuItem {
+    margin-right: 0;
+    height: calc(var(--header-height) / 2);
+  }
+  .num {
+    display: inline-block;
   }
 }

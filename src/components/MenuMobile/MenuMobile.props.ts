@@ -5,6 +5,4 @@ export interface MenuMobileProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   menuItems: IMenuItems[];
   isNum: boolean;
-  isView: boolean;
-  // menuItems: typeof MenuItems;
 }

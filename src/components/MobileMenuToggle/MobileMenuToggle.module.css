@@ -3,8 +3,9 @@
   position: relative;
   display: flex;
   justify-content: right;
+  z-index: 4;
 
-  margin-bottom: 65px;
+  /* margin-bottom: 65px; */
 }
 
 .mobMenuClose {
@@ -17,3 +18,9 @@
   display: inline-block;
   cursor: pointer;
 }
+
+/* @media (max-width: 1116px) {
+  .mobMenuCloseContainer {
+    margin-bottom: initial;
+  }
+} */

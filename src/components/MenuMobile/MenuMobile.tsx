@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import cn from 'classnames';
-import { MenuItem } from '..';
+import { MenuItem, MobileMenuToggle } from '..';
 import { MenuMobileProps } from './MenuMobile.props';
 import styles from './MenuMobile.module.css';
+import { useMenuContext } from '../../context/app.context';
 
 export const MenuMobile = ({
   menuItems,
   isNum,
-  isView,
+  // isView,
   ...props
 }: MenuMobileProps): JSX.Element => {
+  const { isMobileMenuView, setMobileMenuView } = useMenuContext();
+
+
   return (
     <>
-      {isView && (
-        <nav className={cn(styles.nav, { [styles.open]: isView })} {...props}>
+      <MobileMenuToggle
+        setIsView={setMobileMenuView}
+
+      />
+      {isMobileMenuView && (
+        <nav
+          className={cn(styles.nav, { [styles.open]: isMobileMenuView })}
+          {...props}
+        >
           <div className={styles.mobMenuContainer}>
             {menuItems.map((menuItem, idx) => {
               const { name, url } = menuItem;
