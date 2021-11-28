@@ -41,7 +41,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 810px) {
   .menuItem {
     margin-right: 0;
     height: calc(var(--header-height) / 2);

@@ -2,6 +2,7 @@
   position: absolute;
   height: 100vh;
   top: 0;
+  top: -40px;
   right: 0;
   bottom: 0;
   display: flex;
@@ -30,11 +31,6 @@
   padding-left: 32px;
 }
 
-@media (min-width: 601px) {
-  .nav {
-    display: none;
-  }
-}
 @media (max-width: 320px) {
   .nav {
     width: 100vw;
