@@ -15,7 +15,7 @@ export const MenuMobile = ({
 
   return (
     <>
-      <MobileMenuToggle setIsView={setMobileMenuView} />
+      <MobileMenuToggle setIsView={setMobileMenuView!} />
 
       {isMobileMenuView && (
         <nav

@@ -1,4 +1,3 @@
-export { Header } from './Header/Header';
 export { Heading } from './Heading/Heading';
 export { Hero } from './Hero/Hero';
 export { Menu } from './Menu/Menu';

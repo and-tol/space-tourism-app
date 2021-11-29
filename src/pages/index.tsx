@@ -7,7 +7,7 @@ import { Layout } from '../layout';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Header />
+
       <main>
         <Hero />
       </main>
