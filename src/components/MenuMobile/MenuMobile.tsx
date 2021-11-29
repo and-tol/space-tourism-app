@@ -27,7 +27,7 @@ export const MenuMobile = ({
               const { name, url } = menuItem;
               return (
                 <Link key={name} href={url} passHref>
-                  <MenuItem menuItem={name} idx={idx} isNum={isNum} />
+                  <MenuItem path={url} menuItem={name} idx={idx} isNum={isNum} />
                 </Link>
               );
             })}

@@ -1,20 +1,16 @@
 import type { NextPage } from 'next';
 import React from 'react';
-import { Header, Hero } from '../components';
-import { Layout } from '../layout';
-// import styles from '../styles/Home.module.css';
+import { Hero } from '../components';
+import { LayoutHome } from '../layout';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <Layout>
+    <LayoutHome>
 
-      <main>
         <Hero />
-      </main>
 
-      <footer></footer>
-    </Layout>
+    </LayoutHome>
   );
 };
 
-export default Home;
+export default HomePage;

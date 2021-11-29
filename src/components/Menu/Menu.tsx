@@ -13,6 +13,7 @@ export const Menu = ({ menuItems, isNum }: MenuProps): JSX.Element => {
         return (
           <Link key={name} href={url} passHref>
             <MenuItem
+              path={url}
               menuItem={name}
               idx={idx}
               isNum={isNum}

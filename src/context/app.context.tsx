@@ -12,11 +12,12 @@ export const AppContextProvider = ({
   children,
 }: PropsWithChildren<IMenuContext>): JSX.Element => {
   const [mobileMenuState, setMobileMenuState] =
-    useState<boolean>(isMobileMenuView);
+    useState<boolean>(false);
 
   const setMobileMenuView = () => {
     setMobileMenuState(!mobileMenuState);
   };
+
 
   return (
     <MenuContext.Provider

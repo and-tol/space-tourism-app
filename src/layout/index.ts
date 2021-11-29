@@ -1,3 +1,5 @@
-export { Layout } from './Layout';
+export { Header } from './Header/Header';
+export { LayoutDestination } from './LayoutDestination/LayoutDestination';
+export { LayoutHome } from './LayoutHome/LayoutHome';
 export { Meta } from './Meta/Meta';
-export {Header} from './Header/Header'
+export { Layout } from './Layout';

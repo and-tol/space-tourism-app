@@ -1,9 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
+import { Header } from '.';
 import { LayoutProps } from './Layout.props';
 import styles from './Layout.module.css';
-import bgPic from '../../public/assets/home/background-home-desktop.jpg';
-import { Header } from '.';
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
@@ -12,13 +10,6 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
 
       {children}
 
-      <Image
-        src={bgPic}
-        placeholder='blur'
-        className={styles.pic}
-        alt=''
-        layout='fill'
-      />
     </div>
   );
 };
