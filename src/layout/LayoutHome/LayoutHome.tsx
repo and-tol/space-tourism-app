@@ -1,21 +1,22 @@
 import React from 'react';
-import Image from 'next/image';
 import { Layout } from '..';
 import { LayoutHomeProps } from './LayoutHome.props';
-import styles from './LayoutHome.module.css';
+import { BackgroundPageImage } from '../../components';
 
-import bgPic from '../../../public/assets/home/background-home-desktop.jpg';
+import bgPicDesktop from '../../../public/assets/home/background-home-desktop.jpg';
+import bgPicTablet from '../../../public/assets/home/background-home-tablet.jpg';
+import bgPicMobile from '../../../public/assets/home/background-home-mobile.jpg';
 
 export const LayoutHome = ({ children }: LayoutHomeProps): JSX.Element => {
   return (
     <Layout>
       <main>{children}</main>
-      <Image
-        src={bgPic}
-        placeholder='blur'
-        className={styles.pic}
-        alt=''
-        layout='fill'
+      <BackgroundPageImage
+        bgPicUrls={{
+          desktop: bgPicDesktop,
+          tablet: bgPicTablet,
+          mobile: bgPicMobile,
+        }}
       />
     </Layout>
   );
