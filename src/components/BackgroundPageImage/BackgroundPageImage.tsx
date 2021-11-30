@@ -7,14 +7,11 @@ import {
 import styles from './BackgroundPageImage.module.css';
 
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-import { useEffect } from 'react';
 
 export const BackgroundPageImage = ({
   bgPicUrls,
-}: // bgPicUrl,
-BackgroundPageImageProps): JSX.Element => {
+}: BackgroundPageImageProps): JSX.Element => {
   const { width } = useWindowDimensions();
-
 
   let bgPicUrl: BgPicUrl = '';
 
@@ -31,7 +28,6 @@ BackgroundPageImageProps): JSX.Element => {
   if (width && width >= Module.Desktop && bgPicUrls.desktop) {
     bgPicUrl = bgPicUrls.desktop;
   }
-
 
   return (
     <>

@@ -12,11 +12,7 @@ export const LayoutHome = ({ children }: LayoutHomeProps): JSX.Element => {
     <Layout>
       <main>{children}</main>
       <BackgroundPageImage
-        bgPicUrls={{
-          desktop: bgPicDesktop,
-          tablet: bgPicTablet,
-          mobile: bgPicMobile,
-        }}
+        bgPicUrls={{ desktop: bgPicDesktop, tablet: bgPicTablet, mobile:bgPicMobile }}
       />
     </Layout>
   );
