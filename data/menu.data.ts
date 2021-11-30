@@ -24,11 +24,20 @@ export const menuItem: IMenuItem = {
 };
 
 export const menuItems: IMenuItems[] = [
-  { name: menuItem.home, url: '/' },
+  {
+    name: menuItem.home,
+    url: '/'
+  },
   {
     name: menuItem.destination,
     url: `/destination`,
   },
-  { name: menuItem.crew, url: `/crew` },
-  { name: menuItem.technology, url: `/technology` },
+  {
+    name: menuItem.crew,
+    url: `/crew`
+  },
+  {
+    name: menuItem.technology,
+    url: `/technology`
+  },
 ];
