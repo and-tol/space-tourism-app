@@ -42,3 +42,4 @@ export interface TechnologyImages {
   portrait:  string;
   landscape: string;
 }
+
