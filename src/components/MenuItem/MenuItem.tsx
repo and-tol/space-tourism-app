@@ -2,15 +2,20 @@ import cn from 'classnames';
 import { ForwardedRef, forwardRef } from 'react';
 import { MenuItemProps } from './MenuItem.props';
 import styles from './MenuItem.module.css';
+import { useRouter } from 'next/dist/client/router';
 
 export const MenuItem = forwardRef(
   (
-    { menuItem, idx, isNum, className = '', ...props }: MenuItemProps,
+    { path, menuItem, idx, isNum, className = '', ...props }: MenuItemProps,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element => {
+    const { pathname } = useRouter();
+
     return (
       <div
-        className={cn(className, styles.menuItem)}
+        className={cn(className, styles.menuItem, {
+          [styles.active]: path === pathname,
+        })}
         key={menuItem}
         {...props}
         ref={ref}

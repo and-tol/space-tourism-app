@@ -30,23 +30,23 @@
   border-bottom: 3px solid var(--white);
 }
 
+@media (max-width: 810px) {
+  .menuItem {
+    margin-right: 0;
+  }
+  .num {
+    display: inline-block;
+  }
+}
+
 @media (max-width: 768px) {
   .menuItem {
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 2.3625px;
-  }
-  .num {
-    display: none;
-  }
-}
-
-@media (max-width: 810px) {
-  .menuItem {
-    margin-right: 0;
     height: calc(var(--header-height) / 2);
   }
   .num {
-    display: inline-block;
+    display: none;
   }
 }

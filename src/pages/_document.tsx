@@ -21,10 +21,6 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@300;400&family=Bellefair&display=swap'
             rel='stylesheet'
           />
-          {/* <link
-            href='https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@300;400&family=Cormorant+Infant:wght@300&display=swap'
-            rel='stylesheet'
-          /> */}
         </Head>
         <body>
           <Main />
