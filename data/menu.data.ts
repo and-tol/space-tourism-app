@@ -1,20 +1,4 @@
-export enum MenuItems {
-  home = 'Home',
-  destination = 'Destination',
-  crew = 'Crew',
-  technology = 'Technology',
-}
-type MenuItemsStrings = keyof typeof MenuItems;
-
-// ---------
-export interface IMenuItems {
-  name: string;
-  url: string;
-}
-
-export interface IMenuItem {
-  [item: string]: string;
-}
+import { IMenuItem, IMenuItems } from '../src/interface/menu.interface';
 
 export const menuItem: IMenuItem = {
   home: 'Home',
@@ -26,7 +10,7 @@ export const menuItem: IMenuItem = {
 export const menuItems: IMenuItems[] = [
   {
     name: menuItem.home,
-    url: '/'
+    url: '/',
   },
   {
     name: menuItem.destination,
@@ -34,10 +18,10 @@ export const menuItems: IMenuItems[] = [
   },
   {
     name: menuItem.crew,
-    url: `/crew`
+    url: `/crew`,
   },
   {
     name: menuItem.technology,
-    url: `/technology`
+    url: `/technology`,
   },
 ];
