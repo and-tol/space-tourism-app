@@ -7,9 +7,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div className={styles.mainContainer}>
       <Header />
-
       {children}
-
     </div>
   );
 };

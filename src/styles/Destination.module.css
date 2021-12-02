@@ -1,0 +1,27 @@
+/* .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+
+  height: 100%;
+} */
+.gridDestination {
+  grid-template-areas:
+    "pic pic nav"
+    "pic pic description"
+    "pic pic description";
+}
+
+.pic {
+  grid-area: pic;
+  background-color: goldenrod;
+}
+.nav {
+  grid-area: nav;
+  background-color: blueviolet;
+}
+.description {
+  grid-area: description;
+  background-color: green;
+}
