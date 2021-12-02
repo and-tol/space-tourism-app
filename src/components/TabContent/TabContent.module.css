@@ -9,7 +9,7 @@
 
 .description {
   margin-bottom: 54px;
-  color: var(--second-color);
+  color: var(--secondary-color);
 }
 
 .factsContainer {
@@ -25,8 +25,8 @@
   background: var(--mountain-fig);
 }
 
-.fact {
-  width: 50%;
+.factsContainer {
+  width: 100%;
 }
 
 .factTitle {
@@ -42,6 +42,11 @@
 }
 
 .fact {
+  width: 50%;
+}
+
+.factDescription {
+  /* width: 50%; */
   font-family: Bellefair, serif;
 
   font-size: 28px;
@@ -49,5 +54,5 @@
 
   text-transform: uppercase;
 
-  color: var(--main-text-color);
+  color: var(--primary-color);
 }

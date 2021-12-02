@@ -7,6 +7,7 @@
   height: 100%;
 } */
 .gridDestination {
+  grid-template-rows: auto 1fr 1fr;
   grid-template-areas:
     "pic pic nav"
     "pic pic description"
@@ -23,5 +24,5 @@
 }
 .description {
   grid-area: description;
-  background-color: green;
+  /* background-color: green; */
 }

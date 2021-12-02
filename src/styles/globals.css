@@ -13,7 +13,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  color: var(--main-text-color);
+  color: var(--primary-color);
   background-color: var(--black);
 }
 

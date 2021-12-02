@@ -9,6 +9,10 @@
   word-wrap: break-word;
 }
 
+.mainTextColor {
+  color: var(--primary-color) !important;
+}
+
 /* --width = 1116px */
 @media (max-width: 1116px) {
   .wrapper {

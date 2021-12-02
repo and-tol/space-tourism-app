@@ -3,8 +3,8 @@
   --white: #ffffff;
   --mountain-fig: #383b4b;
   --tropical-blue: #d0d6f9;
-  --main-text-color: var(--white);
-  --second-color: var(--tropical-blue);
+  --primary-color: var(--white);
+  --secondary-color: var(--tropical-blue);
 
   --tablet: 769px;
   --tablet-iPad: 810px;
