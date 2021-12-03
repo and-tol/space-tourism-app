@@ -3,7 +3,6 @@ import { Layout } from '..';
 import { LayoutPageProps } from './LayoutPage.props';
 
 export const LayoutPage = ({
-  title,
   children,
 }: LayoutPageProps): JSX.Element => {
   return (

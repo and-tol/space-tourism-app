@@ -2,7 +2,7 @@
   height: var(--header-height);
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 
   align-items: center;
 

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import React from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import { LayoutPage } from '../layout';
 
@@ -11,14 +11,31 @@ import bgPicTablet from '../../public/assets/destination/background-destination-
 import bgPicMobile from '../../public/assets/destination/background-destination-mobile.jpg';
 import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
 
-import { BackgroundPageImage, Heading, TabContent } from '../components';
-import { TabContentv1 } from '../components/TabContent/TabContentv1';
+import {
+  BackgroundPageImage,
+  Heading,
+  TabDescription,
+  Tabs,
+  TabsNav,
+} from '../components';
 
 import data from '../../data/data.json';
-
-const planets: string[] = Object.keys(data);
+import { DataItem, Idx } from '../interface/data.interface';
 
 const DestinationPage: NextPage = () => {
+  // --- Tabs logic --- //
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const handleTabClick = (idx: number): void => {
+    setActiveIndex(idx);
+  };
+
+  const tabs = data.destination.map(
+    (dataItem: DataItem, idx: number): DataItem & Idx => ({
+      ...dataItem,
+      idx,
+    })
+  );
+
   return (
     <>
       <LayoutPage>
@@ -26,19 +43,11 @@ const DestinationPage: NextPage = () => {
           <span className='pageNum'>01</span>Pick your destination
         </Heading>
 
-        <div className={cn('grid', styles.gridDestination)}>
-          <div className={styles.pic}>picture</div>
-          <div className={styles.nav}>
-
-            {/* {planets &&
-            planets.map(planet =>)
-            } */}
-
-          </div>
-          <div className={styles.description}>
-            <TabContentv1 />
-          </div>
-        </div>
+        <Tabs
+          data={data.destination}
+          className='grid'
+          // classNameNav={styles.nav}
+        />
       </LayoutPage>
 
       <BackgroundPageImage
@@ -48,4 +57,5 @@ const DestinationPage: NextPage = () => {
   );
 };
 
+DestinationPage.displayName = 'DestinationPage';
 export default DestinationPage;
