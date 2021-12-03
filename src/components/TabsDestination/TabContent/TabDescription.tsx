@@ -1,13 +1,13 @@
-import { Heading, P } from '..';
-import { TabContentProps } from './TabContent.props';
-import styles from './TabContent.module.css';
+import { Heading, P } from '../..';
+import { TabDescriptionProps } from './TabDescription.props';
+import styles from './TabDescription.module.css';
 
-export const TabContent = ({
+export const TabDescription = ({
   context,
   ...props
-}: TabContentProps): JSX.Element => {
+}: TabDescriptionProps): JSX.Element => {
   return (
-    <div className={styles.tabContent} {...props}>
+    <div className={styles.tabDescription} {...props}>
       <Heading tag='h2' className={styles.name}>
         {context.name}
       </Heading>
@@ -16,11 +16,11 @@ export const TabContent = ({
       <div className={styles.factsContainer}>
         <div className={styles.fact}>
           <h6 className={styles.factTitle}>AVG. DISTANCE</h6>
-          <p className={styles.fact}>{context.distance}</p>
+          <p className={styles.factDescription}>{context.distance}</p>
         </div>
         <div>
           <h6 className={styles.factTitle}>Est. travel time</h6>
-          <p className={styles.fact}>{context.travel}</p>
+          <p className={styles.factDescription}>{context.travel}</p>
         </div>
       </div>
     </div>

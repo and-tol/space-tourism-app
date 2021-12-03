@@ -1,0 +1,41 @@
+.gridDestination {
+  grid-template-rows: auto 1fr 1fr;
+  column-gap: 4vw;
+  grid-template-areas:
+    "pic pic nav"
+    "pic pic description"
+    "pic pic description";
+}
+
+.nav {
+  grid-area: nav;
+}
+.description {
+  grid-area: description;
+}
+.pic {
+  grid-area: pic;
+}
+
+.pictureFit {
+  object-fit: cover;
+  min-height: 0;
+}
+
+
+.tabPictureContainer{
+  position: relative;
+}
+.pictureContainer{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.image{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}

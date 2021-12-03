@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { DestinationContext } from '../../interface/data.interface';
+import { Data, Destination } from '../../interface/data.interface';
 
-export interface TabContentProps
+export interface TabsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  context: DestinationContext;
+  data: Destination[];
 }
