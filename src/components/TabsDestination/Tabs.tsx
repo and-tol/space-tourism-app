@@ -38,12 +38,10 @@ export const Tabs = ({ data, className, ...props }: TabsProps): JSX.Element => {
       )}
 
       {/* Tabs description */}
-      {/* <div className={cn(styles.description)}> */}
         <TabDescription
           context={tabs[activeIndex]}
           className={cn(styles.description)}
         />
-      {/* </div> */}
 
       {/* Tabs picture */}
       <div className={cn(styles.tabsPictureContainer, styles.pic)}>

@@ -1,9 +1,6 @@
 import type { NextPage } from 'next';
-import React, { useState } from 'react';
-// import cn from 'classnames';
+import React from 'react';
 import { LayoutPage } from '../layout';
-
-// import styles from '../styles/Destination.module.css';
 
 import bgPicDesktop from '../../public/assets/destination/background-destination-desktop.jpg';
 
@@ -11,17 +8,9 @@ import bgPicTablet from '../../public/assets/destination/background-destination-
 import bgPicMobile from '../../public/assets/destination/background-destination-mobile.jpg';
 import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
 
-import {
-  BackgroundPageImage,
-  Heading,
-  // TabDescription,
-  Tabs,
-  // TabsNav,
-} from '../components';
+import { BackgroundPageImage, Heading, Tabs } from '../components';
 
 import data from '../../data/data.json';
-import { DataItem, Idx } from '../interface/data.interface';
-// import { DataItem, Idx } from '../interface/data.interface';
 
 const DestinationPage: NextPage = () => {
   return (
@@ -35,7 +24,13 @@ const DestinationPage: NextPage = () => {
       </LayoutPage>
 
       <BackgroundPageImage
-        bgPicUrls={bgPicUrlsCreator(bgPicDesktop, bgPicTablet, bgPicMobile)}
+        bgPicUrls={
+          bgPicUrlsCreator(
+            bgPicDesktop,
+            bgPicTablet,
+            bgPicMobile
+          )
+        }
       />
     </>
   );
