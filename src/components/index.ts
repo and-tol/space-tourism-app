@@ -7,7 +7,4 @@ export { MenuMobile } from './MenuMobile/MenuMobile';
 export { MobileMenuToggle } from './MobileMenuToggle/MobileMenuToggle';
 export { P } from './P/P';
 // Tabs Destination
-export { TabDescription } from './TabsDestination/TabContent/TabDescription';
-export { TabItem } from './TabsDestination/TabItem/TabItem';
 export { Tabs } from './TabsDestination/Tabs';
-export { TabsNav } from './TabsDestination/TabsNav/TabsNav';
