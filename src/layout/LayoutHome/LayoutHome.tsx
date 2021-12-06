@@ -8,10 +8,12 @@ import bgPicDesktop from '../../../public/assets/home/background-home-desktop.jp
 import bgPicTablet from '../../../public/assets/home/background-home-tablet.jpg';
 import bgPicMobile from '../../../public/assets/home/background-home-mobile.jpg';
 
+import styles from './LayoutHome.module.css'
+
 export const LayoutHome = ({ children }: LayoutHomeProps): JSX.Element => {
   return (
     <Layout>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       <BackgroundPageImage
         bgPicUrls={bgPicUrlsCreator(bgPicDesktop, bgPicTablet, bgPicMobile)}
       />

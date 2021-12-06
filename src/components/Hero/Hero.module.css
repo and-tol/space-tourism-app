@@ -1,8 +1,6 @@
 .hero {
   height: 100vh;
   display: flex;
-}
-.content {
   width: 100%;
   display: grid;
   position: relative;
@@ -14,6 +12,7 @@
 
   z-index: 1;
 }
+
 /* --------- */
 .text {
   position: relative;
@@ -73,7 +72,7 @@
 }
 
 @media (max-width: 810px) {
-  .content {
+  .hero {
     grid-template-columns: 1fr;
     align-content: end;
     justify-content: stretch;
@@ -124,9 +123,10 @@
     transition: var(--transition);
   }
 }
+
 @media (max-width: 500px) {
   .info {
-    max-width: 50%;
+    max-width: 100%;
   }
   .button {
     width: 150px;
@@ -152,7 +152,4 @@
 }
 
 @media (max-width: 500px) {
- .info {
-    max-width: 100%;
-  }
 }
