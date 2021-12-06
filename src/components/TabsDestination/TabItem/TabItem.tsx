@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { useMemo } from 'react';
 import { TabItemProps } from './TabItem.props';
 import styles from './TabItem.module.css';
 

@@ -6,3 +6,9 @@
 
   height: 100vh;
 }
+@media (max-width: 810px) {
+.mainContainer {
+  overflow-y: initial;
+  overflow-x: hidden;
+}
+}

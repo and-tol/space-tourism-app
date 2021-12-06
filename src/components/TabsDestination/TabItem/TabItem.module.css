@@ -7,7 +7,6 @@
   outline: none;
   background-color: transparent;
 
-  margin-right: 14px;
   padding-bottom: 12px;
 
   display: inline-flex;
@@ -29,6 +28,10 @@
   color: var(--secondary-color);
 }
 
+.menuItem:not(:last-child) {
+  margin-right: 14px;
+}
+
 .menuItem:hover,
 .menuItem:active {
   color: var(--secondary-color);
@@ -42,8 +45,8 @@
 }
 
 @media (max-width: 810px) {
-  .menuItem {
-    margin-right: 0;
+  .menuItem:not(:last-child) {
+    margin-right: 35px;
   }
 }
 

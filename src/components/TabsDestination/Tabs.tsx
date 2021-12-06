@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 import { TabsProps } from './Tabs.props';
-import styles from './Tabs.module.css';
 import { TabsNav } from './TabsNav/TabsNav';
 import { TabDescription } from './TabContent/TabDescription';
-import { DataItem, Destination, Idx } from '../../interface/data.interface';
+import { Destination, Idx } from '../../interface/data.interface';
+import styles from './Tabs.module.css';
 
 export const Tabs = ({ data, className, ...props }: TabsProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -12,34 +12,41 @@ export const Tabs = ({ data, className, ...props }: TabsProps): JSX.Element => {
     setActiveIndex(idx);
   };
 
-  const tabs = data.map(
+  const tabs: (Destination & Idx)[] = data.map(
     (dataItem: Destination, idx: number): Destination & Idx => ({
       ...dataItem,
       idx,
     })
   );
 
-  const imgPathPNG = tabs[activeIndex].images.png;
-  const imgPathWebP = tabs[activeIndex].images.webp;
+  const imgPathPNG: string = tabs[activeIndex].images.png;
+  const imgPathWebP:string = tabs[activeIndex].images.webp;
 
   return (
-    <div className={cn(styles.gridDestination, className)} {...props}>
-      {/* Tabs toggles  */}
-      <div className={cn(styles.tabsNavContainer, styles.nav)}>
+    <div
+      className={cn('pageSpaces', styles.gridDestination, className)}
+      {...props}
+    >
+      {/* Tabs Navigation  */}
+      {tabs && (
         <TabsNav
           activeIndex={activeIndex}
           tabs={tabs}
           onTabClick={handleTabClick}
+          className='gridAreaNav'
         />
-      </div>
+      )}
 
       {/* Tabs description */}
-      <div className={cn(styles.tabContentContainer, styles.description)}>
-        <TabDescription context={tabs[activeIndex]} />
-      </div>
+      {/* <div className={cn(styles.description)}> */}
+        <TabDescription
+          context={tabs[activeIndex]}
+          className={cn(styles.description)}
+        />
+      {/* </div> */}
 
       {/* Tabs picture */}
-      <div className={cn(styles.tabPictureContainer, styles.pic)}>
+      <div className={cn(styles.tabsPictureContainer, styles.pic)}>
         <picture className={styles.pictureContainer}>
           <source
             srcSet={imgPathWebP}

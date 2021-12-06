@@ -1,18 +1,20 @@
+import cn from 'classnames';
 import { Heading, P } from '../..';
 import { TabDescriptionProps } from './TabDescription.props';
 import styles from './TabDescription.module.css';
 
 export const TabDescription = ({
   context,
+  className,
   ...props
 }: TabDescriptionProps): JSX.Element => {
   return (
-    <div className={styles.tabDescription} {...props}>
+    <div className={cn(styles.tabDescription, className)} {...props}>
       <Heading tag='h2' className={styles.name}>
         {context.name}
       </Heading>
       <P className={styles.description}>{context.description}</P>
-      <hr />
+      <hr className={styles.hr} />
       <div className={styles.factsContainer}>
         <div className={styles.fact}>
           <h6 className={styles.factTitle}>AVG. DISTANCE</h6>
