@@ -4,8 +4,8 @@ export type Data = Destination[] | Crew[] | Technology[];
 export type DataItem = Destination | Crew | Technology;
 export type Idx = { idx: number };
 
-export interface TopLevel {
-  destinations: Destination[];
+export interface IData {
+  destination: Destination[];
   crew: Crew[];
   technology: Technology[];
 }
