@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import React from 'react';
 import { LayoutPage } from '../layout';
 
@@ -10,9 +10,10 @@ import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
 
 import { BackgroundPageImage, Heading, Tabs } from '../components';
 
-import data from '../../data/data.json';
+import { getServerData } from '../utils/getServerData';
+import { Destination, IData } from '../interface/data.interface';
 
-const DestinationPage: NextPage = () => {
+const DestinationPage: NextPage<DestinationPageProps> = ({ destination }) => {
   return (
     <>
       <LayoutPage>
@@ -20,16 +21,14 @@ const DestinationPage: NextPage = () => {
           <span className='pageNum'>01</span>Pick your destination
         </Heading>
 
-        {data.destination && <Tabs data={data.destination} className='grid' />}
+        {destination && <Tabs data={destination} className='grid' />}
       </LayoutPage>
 
       <BackgroundPageImage
-        bgPicUrls={
-          bgPicUrlsCreator(
-            bgPicDesktop,
-            bgPicTablet,
-            bgPicMobile
-          )
+        bgPicUrls={bgPicUrlsCreator(
+          bgPicDesktop,
+          bgPicTablet,
+          bgPicMobile)
         }
       />
     </>
@@ -38,3 +37,23 @@ const DestinationPage: NextPage = () => {
 
 DestinationPage.displayName = 'DestinationPage';
 export default DestinationPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const data: IData = await getServerData('data', 'data.json');
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const destination: Destination[] = data.destination;
+
+  return {
+    props: { destination },
+  };
+};
+
+interface DestinationPageProps extends Record<string, unknown> {
+  destination: Destination[] | null;
+}
