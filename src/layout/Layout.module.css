@@ -10,5 +10,6 @@
     overflow-y: initial;
     overflow-x: hidden;
     height: auto;
+    padding-bottom: 58px;
   }
 }
