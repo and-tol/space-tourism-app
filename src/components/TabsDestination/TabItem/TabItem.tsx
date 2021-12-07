@@ -16,7 +16,7 @@ export const TabItem = ({
       key={tab.name}
       {...props}
     >
-      <span> {tab.name}</span>
+      {tab.name}
     </button>
   );
 };

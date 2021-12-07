@@ -20,7 +20,7 @@ export const TabDescription = ({
           <h6 className={styles.factTitle}>AVG. DISTANCE</h6>
           <p className={styles.factDescription}>{context.distance}</p>
         </div>
-        <div>
+        <div className={styles.fact}>
           <h6 className={styles.factTitle}>Est. travel time</h6>
           <p className={styles.factDescription}>{context.travel}</p>
         </div>

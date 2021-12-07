@@ -6,7 +6,7 @@
   position: relative;
   grid-template-columns: minmax(450px, 42%) 1fr;
 
-  align-content: end;
+  align-content: flex-end;
 
   justify-content: stretch;
 
@@ -149,7 +149,4 @@
 
     transition: var(--transition);
   }
-}
-
-@media (max-width: 500px) {
 }

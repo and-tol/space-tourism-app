@@ -15,6 +15,8 @@
 .factsContainer {
   margin-top: 28px;
   display: flex;
+  width: 100%;
+  margin-top: 28px;
 }
 
 .hr {
@@ -25,11 +27,6 @@
 
   border: none;
   background: var(--mountain-fig);
-}
-
-.factsContainer {
-  width: 100%;
-  margin-top: 28px;
 }
 
 .factTitle {
@@ -61,8 +58,22 @@
 }
 
 @media (max-width: 810px) {
-  .description{
+  .description {
     margin-bottom: 48px;
   }
-
+}
+@media (max-width: 500px) {
+  .description{
+    margin-bottom: 32px;
+  }
+  .factsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .factsContainer{
+    margin-top: 32px;
+  }
+  .fact + .fact{
+    margin-top: 32px;
+  }
 }

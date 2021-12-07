@@ -55,6 +55,14 @@
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 2.3625px;
-    height: calc(var(--header-height) / 2);
+    /* height: calc(var(--header-height) / 2); */
+  }
+}
+@media (max-width: 500px) {
+  .menuItem{
+    padding-bottom: 8px;
+  }
+  .menuItem:not(:last-child) {
+    margin-right: 26px;
   }
 }

@@ -9,5 +9,6 @@
   .mainContainer {
     overflow-y: initial;
     overflow-x: hidden;
+    height: auto;
   }
 }
