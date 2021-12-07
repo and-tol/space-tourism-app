@@ -1,8 +1,14 @@
 .mainContainer {
   display: flex;
-  justify-content: center;
   position: relative;
   overflow: hidden;
 
   height: 100vh;
+}
+@media (max-width: 810px) {
+  .mainContainer {
+    overflow-y: initial;
+    overflow-x: hidden;
+    height: auto;
+  }
 }
