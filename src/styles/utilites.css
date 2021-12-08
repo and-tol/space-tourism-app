@@ -62,8 +62,8 @@
   grid-area: pic;
 }
 
-.height100{
-  height: 100vh;
+.height100vh {
+  height: 100vh !important;
 }
 
 @media (max-width: 1116px) {
