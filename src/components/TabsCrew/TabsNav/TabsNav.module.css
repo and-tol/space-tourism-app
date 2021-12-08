@@ -15,5 +15,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+  .nav {
+    margin-top: 32px;
+  }
 }

@@ -64,6 +64,12 @@
     line-height: 100px;
     transition: var(--transition);
   }
+  .h3 {
+    font-size: 24px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
   .h5 {
     font-size: 16px;
     line-height: 19px;

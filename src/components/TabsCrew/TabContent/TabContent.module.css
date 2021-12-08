@@ -32,7 +32,7 @@
 
 
 @media (max-width: 500px) {
-  .description {
-    /* margin-bottom: 32px; */
+  .tabDescription {
+    margin-top: 32px;
   }
 }

@@ -42,7 +42,6 @@ export const TabsCrew = ({
       <TabContent
         context={tabs[activeIndex]}
         className={cn(styles.description, 'content')}
-        // className={cn(styles.description)}
       />
 
       {/* Tabs picture */}
