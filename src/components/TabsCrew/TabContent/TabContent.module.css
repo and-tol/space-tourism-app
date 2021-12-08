@@ -1,0 +1,32 @@
+.tabDescription {
+  margin-top: 37px;
+  width: 100%;
+  z-index: 1;
+}
+
+.role {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.name {
+  white-space: nowrap;
+  margin-bottom: 27px;
+}
+
+.description {
+  max-width: 444px;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 810px) {
+  .description {
+    /* margin-bottom: 48px; */
+  }
+}
+
+@media (max-width: 500px) {
+  .description {
+    /* margin-bottom: 32px; */
+  }
+}

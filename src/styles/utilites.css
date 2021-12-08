@@ -50,6 +50,18 @@
   align-self: flex-start;
 }
 
+.nav {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.pic {
+  grid-area: pic;
+}
+
 @media (max-width: 1116px) {
   .wrapper {
     padding-left: var(--padding-tablet);
