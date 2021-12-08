@@ -1,11 +1,5 @@
 .nav {
   display: flex;
-
-  padding-top: 120px;
-}
-
-.itemMargin {
-  margin-right: 48px;
 }
 
 .nav > div + div {
@@ -13,13 +7,13 @@
 }
 
 @media (max-width: 810px) {
+  .nav {
+    margin-top: 40px;
+  }
   .nav > div + div {
     margin-left: 36px;
   }
 }
 
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
 }

@@ -62,6 +62,10 @@
   grid-area: pic;
 }
 
+.height100{
+  height: 100vh;
+}
+
 @media (max-width: 1116px) {
   .wrapper {
     padding-left: var(--padding-tablet);

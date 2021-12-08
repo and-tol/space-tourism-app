@@ -1,12 +1,12 @@
 .gridCrew {
   grid-template-columns: 48% 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr 120px;
   grid-column-gap: 1vw;
   grid-template-areas:
     '.       .   . '
     'content pic pic '
-    'nav     pic pic '
-    '.       pic pic ';
+    '.  pic pic '
+    'nav     pic pic ';
 }
 
 .pictureFit {
@@ -35,23 +35,26 @@
 }
 
 @media (max-width: 810px) {
-  .gridDestination {
+  .gridCrew {
     grid-template-columns: minmax(300px, 574px);
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      'pic'
-      'nav'
-      'description';
+    'content'
+    'nav'
+    'pic';
     justify-items: center;
-    justify-content: center;
     align-self: center;
   }
+.tabsPictureContainer {
+  margin-top: 40px;
+  position: relative;
+}
   .image {
     position: relative;
-    max-width: 300px;
+    /* max-width: 300px; */
   }
   .tabsPictureContainer {
-    margin-bottom: 53px;
+    /* margin-bottom: 53px; */
   }
   .tabsContentContainer {
     margin-top: 32px;

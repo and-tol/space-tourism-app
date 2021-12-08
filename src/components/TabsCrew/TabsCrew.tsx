@@ -46,7 +46,7 @@ export const TabsCrew = ({
       />
 
       {/* Tabs picture */}
-      <div className={cn(styles.tabsPictureContainer, styles.pic, 'pic')}>
+      <div className={cn(styles.tabsPictureContainer, 'pic')}>
         <picture className={styles.pictureContainer}>
           <source
             srcSet={imgPathWebP}

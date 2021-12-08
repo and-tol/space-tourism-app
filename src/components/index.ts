@@ -6,5 +6,6 @@ export { MenuItem } from './MenuItem/MenuItem';
 export { MenuMobile } from './MenuMobile/MenuMobile';
 export { MobileMenuToggle } from './MobileMenuToggle/MobileMenuToggle';
 export { P } from './P/P';
+export { TabsCrew } from './TabsCrew/TabsCrew';
 // Tabs Destination
 export { Tabs } from './TabsDestination/Tabs';
