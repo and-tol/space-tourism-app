@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { Crew } from '../../interface/data.interface';
+import { DataItem, Idx } from '../../../interface/data.interface';
 
-export interface TabsCrewProps
+export interface SliderCrewContentProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  data: Crew[];
+  context: DataItem & Idx;
 }

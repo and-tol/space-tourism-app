@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { DataItem, Idx } from '../../../interface/data.interface';
 
-export interface TabsNavProps
+export interface SliderCrewNavProps
   extends DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement

@@ -1,17 +1,17 @@
 import React from 'react';
 import cn from 'classnames';
-import { TabsNavProps } from './TabsNav.props';
-import styles from './TabsNav.module.css';
+import { SliderCrewNavProps } from './SliderCrewNav.props';
+import styles from './SliderCrewNav.module.css';
 import { DataItem } from '../../../interface/data.interface';
-import { TabItem } from '../TabItem/TabItem';
+import { TabItem } from '../SliderCrewItem/SliderCrewItem';
 
-export const TabsNav = ({
+export const SliderCrewNav = ({
   tabs,
   activeIndex,
   onTabClick,
   className,
   ...props
-}: TabsNavProps): JSX.Element => {
+}: SliderCrewNavProps): JSX.Element => {
   return (
     <nav className={cn(className, styles.nav)} {...props}>
       {tabs.map((tab: DataItem, idx: number): JSX.Element => {

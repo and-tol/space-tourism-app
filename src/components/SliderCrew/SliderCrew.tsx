@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import { TabsCrewProps } from './TabsCrew.props';
-import { TabsNav } from './TabsNav/TabsNav';
-import { TabContent } from './TabContent/TabContent';
+import { SliderCrewProps } from './SliderCrew.props';
+import { SliderCrewNav } from './SliderCrewNav/SliderCrewNav';
+import { SliderCrewContent } from './SliderCrewContent/SliderCrewContent';
 import { Crew, Idx } from '../../interface/data.interface';
-import styles from './TabsCrew.module.css';
+import styles from './SliderCrew.module.css';
 
-export const TabsCrew = ({
+export const SliderCrew = ({
   data,
   className,
   ...props
-}: TabsCrewProps): JSX.Element => {
+}: SliderCrewProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const handleTabClick = (idx: number): void => {
     setActiveIndex(idx);
@@ -30,7 +30,7 @@ export const TabsCrew = ({
     <div className={cn('pageSpaces', styles.gridCrew, className)} {...props}>
       {/* Tabs Navigation  */}
       {tabs && (
-        <TabsNav
+        <SliderCrewNav
           activeIndex={activeIndex}
           tabs={tabs}
           onTabClick={handleTabClick}
@@ -39,7 +39,7 @@ export const TabsCrew = ({
       )}
 
       {/* Tabs description */}
-      <TabContent
+      <SliderCrewContent
         context={tabs[activeIndex]}
         className={cn(styles.description, 'content')}
       />

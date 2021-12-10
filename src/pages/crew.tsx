@@ -8,7 +8,7 @@ import bgPicMobile from '../../public/assets/crew/background-crew-mobile.jpg';
 
 import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
 
-import { BackgroundPageImage, Heading, TabsCrew } from '../components';
+import { BackgroundPageImage, Heading, SliderCrew } from '../components';
 
 import { getServerData } from '../utils/getServerData';
 import { Crew, IData } from '../interface/data.interface';
@@ -21,7 +21,7 @@ const CrewPage: NextPage<CrewPageProps> = ({ crew }) => {
           <span className='pageNum'>02</span>Meet your crew
         </Heading>
 
-        {crew && <TabsCrew data={crew} className='grid' />}
+        {crew && <SliderCrew data={crew} className='grid' />}
       </LayoutCrew>
 
       <BackgroundPageImage
