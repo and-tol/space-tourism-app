@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { IMenuItems } from '../../../data/menu.data';
+import { IMenuItems } from '../../interface/menu.interface';
 
 export interface MenuMobileProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
