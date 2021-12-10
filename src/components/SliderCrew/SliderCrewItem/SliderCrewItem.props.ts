@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { DataItem } from '../../../interface/data.interface';
 
-export interface TabItemProps
+export interface SliderCrewItemProps
   extends DetailedHTMLProps<
     HTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement

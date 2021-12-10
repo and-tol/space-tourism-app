@@ -1,13 +1,13 @@
 import cn from 'classnames';
-import styles from './TabItem.module.css';
-import { TabItemProps } from './TabItem.props';
+import { SliderCrewItemProps } from './SliderCrewItem.props';
+import styles from './SliderCrewItem.module.css';
 
 export const TabItem = ({
   tab,
   isActive,
   className,
   ...props
-}: TabItemProps): JSX.Element => {
+}: SliderCrewItemProps): JSX.Element => {
   return (
     <button
       className={cn(className, styles.menuItem, {
