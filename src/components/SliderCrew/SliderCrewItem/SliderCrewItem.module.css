@@ -17,14 +17,17 @@
   transition: var(--transition);
 }
 
-.menuItem:hover {
-  opacity: 0.5;
+.menuItem:active,
+.menuItem.active {
+  opacity: 1;
   transition: var(--transition);
 }
 
-.active {
-  opacity: 1 !important;
-  transition: var(--transition);
+@media (min-width: 810px) {
+  .menuItem:hover {
+    opacity: 0.5;
+    transition: var(--transition);
+  }
 }
 
 @media (max-width: 810px) {
