@@ -6,9 +6,9 @@
   position: relative;
   grid-template-columns: minmax(450px, 42%) 1fr;
 
-  align-content: flex-end;
+  /* align-content: flex-end; */
 
-  justify-content: stretch;
+  /* justify-content: stretch; */
 
   z-index: 1;
 }
@@ -74,8 +74,8 @@
 @media (max-width: 810px) {
   .hero {
     grid-template-columns: 1fr;
-    align-content: end;
-    justify-content: stretch;
+    /* align-content: end; */
+    /* justify-content: stretch; */
 
     transition: var(--transition);
   }
@@ -100,7 +100,7 @@
   }
 
   .button {
-    align-self: end;
+    align-self: initial;
     justify-self: center;
 
     width: 242px;

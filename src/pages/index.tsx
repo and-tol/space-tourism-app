@@ -6,9 +6,7 @@ import { LayoutHome } from '../layout';
 const HomePage: NextPage = () => {
   return (
     <LayoutHome>
-
         <Hero />
-
     </LayoutHome>
   );
 };
