@@ -45,6 +45,12 @@
   .h2 {
     font-size: 80px;
   }
+  .h3 {
+    font-size: 40px;
+  }
+  .h4 {
+    font-size: 24px;
+  }
   .h5 {
     font-size: 20px;
     line-height: 24px;
@@ -57,6 +63,12 @@
     font-size: 80px;
     line-height: 100px;
     transition: var(--transition);
+  }
+  .h3 {
+    font-size: 24px;
+  }
+  .h3 {
+    font-size: 16px;
   }
   .h5 {
     font-size: 16px;

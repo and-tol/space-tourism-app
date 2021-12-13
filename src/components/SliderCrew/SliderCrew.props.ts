@@ -1,8 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { IMenuItems } from '../../interface/menu.interface';
+import { Crew } from '../../interface/data.interface';
 
-export interface MenuMobileProps
+export interface SliderCrewProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  menuItems: IMenuItems[];
-  isNum: boolean;
+  data: Crew[];
 }

@@ -3,15 +3,15 @@
   column-gap: 4vw;
   grid-template-areas:
     'pic pic nav'
-    'pic pic descr'
-    'pic pic descr';
+    'pic pic content'
+    'pic pic content';
 }
 
 .nav {
   grid-area: nav;
 }
-.descr {
-  grid-area: descr;
+.content {
+  grid-area: content;
 }
 .pic {
   grid-area: pic;
@@ -49,17 +49,17 @@
       'description';
     justify-items: center;
     justify-content: center;
-    
+
     align-self: center;
   }
   .image {
     position: relative;
     max-width: 300px;
   }
-  .tabsPictureContainer{
+  .tabsPictureContainer {
     margin-bottom: 53px;
   }
-  .tabsContentContainer{
+  .tabsContentContainer {
     margin-top: 32px;
   }
   /* .pic {
