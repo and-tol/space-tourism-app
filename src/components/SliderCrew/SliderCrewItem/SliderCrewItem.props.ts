@@ -7,5 +7,5 @@ export interface SliderCrewItemProps
     HTMLButtonElement
   > {
   isActive: boolean;
-  tab: DataItem;
+  slide: DataItem;
 }

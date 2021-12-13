@@ -3,23 +3,23 @@ import cn from 'classnames';
 import { SliderCrewNavProps } from './SliderCrewNav.props';
 import styles from './SliderCrewNav.module.css';
 import { DataItem } from '../../../interface/data.interface';
-import { TabItem } from '../SliderCrewItem/SliderCrewItem';
+import { SliderCrewItem } from '../SliderCrewItem/SliderCrewItem';
 
 export const SliderCrewNav = ({
-  tabs,
-  activeIndex,
+  slides,
+  position,
   onTabClick,
   className,
   ...props
 }: SliderCrewNavProps): JSX.Element => {
   return (
     <nav className={cn(className, styles.nav)} {...props}>
-      {tabs.map((tab: DataItem, idx: number): JSX.Element => {
+      {slides?.map((slide: DataItem, idx: number): JSX.Element => {
         return (
-          <TabItem
+          <SliderCrewItem
             key={idx}
-            tab={tab}
-            isActive={idx === activeIndex}
+            slide={slide}
+            isActive={idx === position}
             onClick={() => onTabClick(idx)}
           />
         );

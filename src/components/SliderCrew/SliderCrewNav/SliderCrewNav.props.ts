@@ -6,7 +6,7 @@ export interface SliderCrewNavProps
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  tabs: (DataItem & Idx)[];
-  activeIndex: number;
+  slides: (DataItem & Idx)[];
+  position: number;
   onTabClick(idx: number): void;
 }
