@@ -1,57 +1,58 @@
 .menuItem {
-    padding-bottom: 12px;
-    display: inline-flex;
-    align-items: center;
-    border-bottom: 3px solid transparent;
-    transition: var(--transition);
-    cursor: pointer;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 2.7px;
-    text-indent: 2.7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    justify-content: center;
-    color: var(--secondary-color);
+  padding-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-indent: 2.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  justify-content: center;
+  color: var(--secondary-color);
 }
 
 .menuItem:not(:last-child) {
-    margin-right: 14px;
+  margin-right: 14px;
 }
 
-.menuItem:hover,
+.menuItem:hover {
+  color: var(--secondary-color);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  transition: var(--transition);
+}
+
+.menuItem.active,
 .menuItem:active {
-    color: var(--secondary-color);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    transition: var(--transition);
-}
-
-.active {
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  transition: var(--transition);
 }
 
 @media (max-width: 810px) {
-    .menuItem:not(:last-child) {
-        margin-right: 35px;
-    }
+  .menuItem:not(:last-child) {
+    margin-right: 35px;
+  }
 }
 
 @media (max-width: 768px) {
-    .menuItem {
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: 2.3625px;
-        /* height: calc(var(--header-height) / 2); */
-    }
+  .menuItem {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    /* height: calc(var(--header-height) / 2); */
+  }
 }
 
 @media (max-width: 500px) {
-    .menuItem {
-        padding-bottom: 8px;
-    }
-    .menuItem:not(:last-child) {
-        margin-right: 26px;
-    }
+  .menuItem {
+    padding-bottom: 8px;
+  }
+  .menuItem:not(:last-child) {
+    margin-right: 26px;
+  }
 }
