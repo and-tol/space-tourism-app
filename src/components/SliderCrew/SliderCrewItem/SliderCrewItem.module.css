@@ -1,35 +1,40 @@
 .menuItem {
-    width: 15px;
-    height: 15px;
-    background-color: var(--white);
-    opacity: 0.17;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: var(--transition);
+  width: 15px;
+  height: 15px;
+  background-color: var(--white);
+  opacity: 0.17;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .menuItem:not(:last-child) {
-    margin-right: 24px;
+  margin-right: 24px;
 }
 
-.menuItem:hover,
 .menuItem:active {
-    opacity: 0.5;
-    transition: var(--transition);
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.menuItem:hover {
+  opacity: 0.5;
+  transition: var(--transition);
 }
 
 .active {
-    opacity: 1;
+  opacity: 1 !important;
+  transition: var(--transition);
 }
 
 @media (max-width: 810px) {
-    .menuItem:not(:last-child) {
-        margin-right: 16px;
-    }
+  .menuItem:not(:last-child) {
+    margin-right: 16px;
+  }
 }
 
 @media (max-width: 500px) {
-    .menuItem {
-        padding-bottom: 8px;
-    }
+  .menuItem {
+    padding-bottom: 8px;
+  }
 }
