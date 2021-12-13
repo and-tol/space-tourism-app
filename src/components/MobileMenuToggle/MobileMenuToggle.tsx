@@ -5,23 +5,25 @@ import { MenuMobileToggleProps } from './MenuMobileToggle.props';
 import { useState } from 'react';
 
 export const MobileMenuToggle = ({
-  setIsView,
+  setView,
   ...props
 }: MenuMobileToggleProps): JSX.Element => {
   const [isShowBurger, setIsShowBurger] = useState<boolean>(true);
 
-  const toggleMenu = () => {
-    setIsView && setIsView();
+  const toggleMenu = (): void => {
+    setView && setView(isShowBurger);
     setIsShowBurger(!isShowBurger);
   };
 
   return (
-    <>
-      <div className={styles.mobMenuCloseContainer} {...props}>
-        <button className={styles.mobMenuClose} onClick={toggleMenu}>
-          {isShowBurger ? <BurgerMenuIcon /> : <CloseIcon />}
-        </button>
-      </div>
-    </>
+    <div
+      className={styles.mobMenuCloseContainer}
+      onClick={toggleMenu}
+      {...props}
+    >
+      <button className={styles.mobMenuClose}>
+        {isShowBurger ? <BurgerMenuIcon /> : <CloseIcon />}
+      </button>
+    </div>
   );
 };

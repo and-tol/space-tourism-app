@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import cn from 'classnames';
 import { MenuItem, MobileMenuToggle } from '..';
 import { MenuMobileProps } from './MenuMobile.props';
 import styles from './MenuMobile.module.css';
-import { IMenuContext, useMenuContext } from '../../context/app.context';
+import {  useMenuContext } from '../../context/app.context';
 
 export const MenuMobile = ({
   menuItems,
@@ -13,9 +13,13 @@ export const MenuMobile = ({
 }: MenuMobileProps): JSX.Element => {
   const { isMobileMenuView, setMobileMenuView } = useMenuContext();
 
+  const closeMobileMenu = (): void => {
+    setMobileMenuView(false);
+  }
+
   return (
     <>
-      <MobileMenuToggle setIsView={setMobileMenuView!} />
+      <MobileMenuToggle setView={setMobileMenuView!} />
 
       {isMobileMenuView && (
         <nav
@@ -27,7 +31,13 @@ export const MenuMobile = ({
               const { name, url } = menuItem;
               return (
                 <Link key={name} href={url} passHref>
-                  <MenuItem path={url} menuItem={name} idx={idx} isNum={isNum} />
+                  <MenuItem
+                    path={url}
+                    menuItem={name}
+                    idx={idx}
+                    isNum={isNum}
+                    onClick={closeMobileMenu}
+                  />
                 </Link>
               );
             })}
