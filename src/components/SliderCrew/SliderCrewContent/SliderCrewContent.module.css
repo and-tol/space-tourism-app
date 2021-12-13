@@ -20,8 +20,10 @@
 }
 
 @media (max-width: 810px) {
-  .description {
+  .tabDescription {
     text-align: center;
+  }
+  .description {
     min-width: 100%;
   }
   .name {
