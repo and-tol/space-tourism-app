@@ -24,15 +24,15 @@
     text-align: center;
     min-width: 100%;
   }
-  .name{
+  .name {
     white-space: initial;
     margin-bottom: 16px;
   }
 }
 
-
 @media (max-width: 500px) {
   .tabDescription {
     margin-top: 32px;
+    padding-bottom: 80px;
   }
 }
