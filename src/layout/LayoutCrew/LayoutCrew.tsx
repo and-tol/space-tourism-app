@@ -7,7 +7,7 @@ import styles from './LayoutCrew.module.css';
 export const LayoutCrew = ({ children }: LayoutCrewProps): JSX.Element => {
   return (
     <Layout className='height100vh pb0'>
-      <main className={cn('wrapper pageMain', styles.layoutCrew)}>
+      <main className={cn('wrapper pageMain height100vh', styles.layoutCrew)}>
         {children}
       </main>
     </Layout>
