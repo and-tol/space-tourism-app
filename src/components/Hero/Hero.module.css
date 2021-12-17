@@ -6,10 +6,6 @@
   position: relative;
   grid-template-columns: minmax(450px, 42%) 1fr;
 
-  /* align-content: flex-end; */
-
-  /* justify-content: stretch; */
-
   z-index: 1;
 }
 
@@ -27,9 +23,9 @@
 }
 /* --------- */
 .button {
-  padding: 0;
-  margin: 0;
-  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin-bottom: 10vh;
   align-self: end;
@@ -40,12 +36,9 @@
   border-radius: 274px;
 
   font-family: Bellefair, serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 32px;
-  line-height: 100%;
   text-transform: uppercase;
-  text-align: center;
+  color: var(--black);
 
   background-color: var(--white);
 
@@ -64,24 +57,13 @@
   transition: all 0.65s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
-/* --------- */
-
-.pic {
-  object-fit: cover;
-  min-height: 0;
-}
-
 @media (max-width: 810px) {
   .hero {
     grid-template-columns: 1fr;
-    /* align-content: end; */
-    /* justify-content: stretch; */
-
     transition: var(--transition);
   }
   .text {
     justify-self: center;
-
     transition: var(--transition);
   }
 
@@ -89,7 +71,6 @@
   .title,
   .info {
     text-align: center;
-
     transition: var(--transition);
   }
 
