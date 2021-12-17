@@ -1,14 +1,19 @@
-import cn from 'classnames';
 import React from 'react';
+import Link from 'next/link';
+import cn from 'classnames';
 import { menuItems } from '../../../data/menu.data';
 import { Menu, MenuMobile } from '../../components';
-import styles from './Header.module.css';
 import SpaceTourismLogo from './logo.svg';
+import styles from './Header.module.css';
 
 export const Header = React.memo((): JSX.Element => {
   return (
     <header className={cn(styles.header)}>
-      <SpaceTourismLogo className={styles.logo} />
+      <Link href='/'>
+        <a className={styles.logo}>
+          <SpaceTourismLogo />
+        </a>
+      </Link>
       <div className={styles.menuContainer}>
         <div className={styles.headerDecoration}>
           <div className={styles.background}></div>

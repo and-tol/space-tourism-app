@@ -6,13 +6,13 @@ import { useRouter } from 'next/dist/client/router';
 
 export const MenuItem = forwardRef(
   (
-    { path, menuItem, idx, isNum, className = '', ...props }: MenuItemProps,
-    ref: ForwardedRef<HTMLDivElement>
+    { path, menuItem, idx, isNum, className, ...props }: MenuItemProps,
+    ref: ForwardedRef<HTMLAnchorElement>
   ): JSX.Element => {
     const { pathname } = useRouter();
 
     return (
-      <div
+      <a
         className={cn(className, styles.menuItem, {
           [styles.active]: path === pathname,
         })}
@@ -22,7 +22,7 @@ export const MenuItem = forwardRef(
       >
         {isNum && <span className={styles.num}>{`0${idx}`}</span>}
         <span className={styles.text}>{menuItem}</span>
-      </div>
+      </a>
     );
   }
 );

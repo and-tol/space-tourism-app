@@ -16,21 +16,6 @@
   margin-top: 40px;
 }
 
-/* .header::after{
-  display: block;
-  content: "";
-  background-color: rgba(255, 255, 255, 0.04);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 40%;
-  width: 100%;
-
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  z-index: -1;
-} */
-
 .background {
   position: absolute;
   top: 0;
