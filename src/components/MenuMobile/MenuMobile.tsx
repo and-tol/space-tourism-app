@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { MenuItem, MobileMenuToggle } from '..';
 import { MenuMobileProps } from './MenuMobile.props';
 import styles from './MenuMobile.module.css';
-import {  useMenuContext } from '../../context/app.context';
+import { useMenuContext } from '../../context/app.context';
 
 export const MenuMobile = ({
   menuItems,
@@ -15,35 +15,33 @@ export const MenuMobile = ({
 
   const closeMobileMenu = (): void => {
     setMobileMenuView(false);
-  }
+  };
 
   return (
     <>
       <MobileMenuToggle setView={setMobileMenuView!} />
 
-      {isMobileMenuView && (
-        <nav
-          className={cn(styles.nav, { [styles.open]: isMobileMenuView })}
-          {...props}
-        >
-          <div className={styles.mobMenuContainer}>
-            {menuItems.map((menuItem, idx) => {
-              const { name, url } = menuItem;
-              return (
-                <Link key={name} href={url} passHref>
-                  <MenuItem
-                    path={url}
-                    menuItem={name}
-                    idx={idx}
-                    isNum={isNum}
-                    onClick={closeMobileMenu}
-                  />
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
-      )}
+      <nav
+        className={cn(styles.nav, { [styles.open]: isMobileMenuView })}
+        {...props}
+      >
+        <div className={styles.mobMenuContainer}>
+          {menuItems.map((menuItem, idx) => {
+            const { name, url } = menuItem;
+            return (
+              <Link key={name} href={url} passHref>
+                <MenuItem
+                  path={url}
+                  menuItem={name}
+                  idx={idx}
+                  isNum={isNum}
+                  onClick={closeMobileMenu}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
     </>
   );
 };
