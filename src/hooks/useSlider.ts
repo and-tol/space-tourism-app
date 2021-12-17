@@ -1,9 +1,4 @@
-import { Data, DataItem, Idx } from '../interface/data.interface';
-
-interface Slides {
-  slides: (DataItem & Idx)[];
-  numSlides: number;
-}
+import { Data, DataItem, Idx, Slides } from '../interface/data.interface';
 
 export const useSlides = (data: Data): Slides => {
   const slides: (DataItem & Idx)[] = data.map(

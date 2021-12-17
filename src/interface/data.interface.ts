@@ -19,9 +19,12 @@ export interface Crew {
 }
 
 export interface Images {
-  png: string;
-  webp: string;
+  [key: string]: string;
 }
+// export interface Images {
+//   png: string;
+//   webp: string;
+// }
 
 export interface Destination {
   name: string;
@@ -40,15 +43,21 @@ export interface DestinationContext {
 
 export interface Technology {
   name: string;
-  images: TechnologyImages;
+  images: Images;
   description: string;
   [key: string]: any;
 }
 
-export interface TechnologyImages {
-  [key: string]: string;
-}
+// export interface TechnologyImages {
+//   [key: string]: string;
+// }
 // export interface TechnologyImages {
 //   portrait: string;
 //   landscape: string;
 // }
+
+
+export interface Slides {
+  slides: (DataItem & Idx)[];
+  numSlides: number;
+}
