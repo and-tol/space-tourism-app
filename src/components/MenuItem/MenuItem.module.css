@@ -16,7 +16,7 @@
 }
 
 .menuItem:not(:last-child) {
-  margin-right: 14px;
+  margin-right: 48px;
 }
 
 .menuItem:hover {
@@ -48,6 +48,7 @@
     line-height: 17px;
     letter-spacing: 2.3625px;
     height: calc(var(--header-height) / 2);
+    padding-top: 10px;
   }
   .num {
     display: none;
