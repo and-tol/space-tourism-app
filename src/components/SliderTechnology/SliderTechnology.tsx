@@ -15,6 +15,9 @@ import {
   SliderAction,
   SliderState,
 } from '../../interface/Slider.types';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { BroserWindowSizes } from '../../interface/constants.types';
+import { onTechnologyPicOrintation } from '../../helpers/onTechnologyPicOrintation';
 
 export const SliderTechnology = ({
   data,
@@ -44,21 +47,22 @@ export const SliderTechnology = ({
     }, 50);
   };
   const handlersPicture = useSwipeable({
-    onSwiped: eventData => console.log('User Swiped Picture!', eventData),
+    // onSwiped: eventData => console.log('User Swiped Picture!', eventData),
     onSwipedLeft: () => onSlide(NEXT),
     onSwipedRight: () => onSlide(PREV),
     trackMouse: true,
   });
   const handlersContext = useSwipeable({
-    onSwiped: eventData => console.log('User Swiped Context!', eventData),
+    // onSwiped: eventData => console.log('User Swiped Context!', eventData),
     onSwipedLeft: () => onSlide(NEXT),
     onSwipedRight: () => onSlide(PREV),
     trackMouse: true,
   });
 
   // ---------------- Change Picture
-  const imgPathPNG: string = slides[state.pos].images.png;
-  const imgPathWebP: string = slides[state.pos].images.webp;
+  const { width: windowWidth } = useWindowDimensions();
+  const orientation: string = onTechnologyPicOrintation(windowWidth);
+  const imgPath: string = slides[state.pos].images[orientation];
 
   return (
     <div
@@ -77,7 +81,7 @@ export const SliderTechnology = ({
 
       {/* Slider Content */}
       <SliderTechnologyContent
-        context={slides[state.pos]}
+        content={slides[state.pos]}
         handlers={handlersContext}
       />
 
@@ -86,23 +90,13 @@ export const SliderTechnology = ({
         className={cn(styles.tabsPictureContainer, 'pic')}
         {...handlersPicture}
       >
-        <picture className={styles.pictureContainer}>
-          <source
-            srcSet={imgPathWebP}
-            type='image/webp'
-            className={cn(styles.pictureFit, styles.image)}
-          />
-          <source
-            srcSet={imgPathPNG}
-            type='image/png'
-            className={cn(styles.pictureFit, styles.image)}
-          />
-          <img
-            src={imgPathPNG}
-            alt=''
-            className={cn(styles.pictureFit, styles.image)}
-          />
-        </picture>
+        {/* <picture className={styles.pictureContainer}> */}
+        <img
+          src={imgPath}
+          alt=''
+          className={cn(styles.pictureFit, styles.image)}
+        />
+        {/* </picture> */}
       </div>
     </div>
   );

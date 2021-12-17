@@ -1,12 +1,12 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
-import { DataItem, Idx } from '../../../interface/data.interface';
+import { Idx, Technology } from '../../../interface/data.interface';
 
 export interface SliderTechnologyNavProps
   extends DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  slides: (DataItem & Idx)[];
+  slides: (Technology & Idx)[];
   position: number;
   onTabClick(idx: number): void;
 }

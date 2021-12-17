@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { DataItem } from '../../../interface/data.interface';
+import { Idx, Technology } from '../../../interface/data.interface';
 
 export interface SliderTechnologyItemProps
   extends DetailedHTMLProps<
@@ -7,5 +7,5 @@ export interface SliderTechnologyItemProps
     HTMLButtonElement
   > {
   isActive: boolean;
-  slide: DataItem;
+  slide: Technology & Idx;
 }

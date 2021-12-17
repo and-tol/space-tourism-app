@@ -6,12 +6,9 @@ import { ForwardedRef, forwardRef } from 'react';
 
 export const SliderTechnologyContent = forwardRef(
   (
-    { context, className, handlers, ...props }: SliderTechnologyContentProps,
+    { content, className, handlers, ...props }: SliderTechnologyContentProps,
     ref: ForwardedRef<HTMLDivElement>
   ): JSX.Element => {
-
-    console.log('context>>>', context);
-
     return (
       <div
         className={cn(styles.tabDescription, className)}
@@ -22,9 +19,9 @@ export const SliderTechnologyContent = forwardRef(
           THE TERMINOLOGY…
         </Heading>
         <Heading tag='h3' className={styles.name}>
-          {context.name}
+          {content.name}
         </Heading>
-        <P className={styles.description}>{context.description}</P>
+        <P className={styles.description}>{content.description}</P>
       </div>
     );
   }

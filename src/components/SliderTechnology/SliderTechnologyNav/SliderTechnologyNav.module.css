@@ -1,17 +1,23 @@
 .nav {
   display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
-.nav > div + div {
-  margin-left: 48px;
+.nav > button + button {
+  margin-top: 48px;
 }
 
 @media (max-width: 810px) {
   .nav {
-    margin-top: 40px;
+    height: auto;
+    flex-direction: row;
+    margin-top: 57px;
+    margin-bottom: 44px;
   }
-  .nav > div + div {
-    margin-left: 36px;
+  .nav > button + button {
+    margin-top: initial;
+    margin-left: 16px;
   }
 }
 

@@ -44,13 +44,13 @@ export const SliderCrew = ({
     }, 50);
   };
   const handlersPicture = useSwipeable({
-    onSwiped: eventData => console.log('User Swiped Picture!', eventData),
+    // onSwiped: eventData => console.log('User Swiped Picture!', eventData),
     onSwipedLeft: () => onSlide(NEXT),
     onSwipedRight: () => onSlide(PREV),
     trackMouse: true,
   });
   const handlersContext = useSwipeable({
-    onSwiped: eventData => console.log('User Swiped Context!', eventData),
+    // onSwiped: eventData => console.log('User Swiped Context!', eventData),
     onSwipedLeft: () => onSlide(NEXT),
     onSwipedRight: () => onSlide(PREV),
     trackMouse: true,

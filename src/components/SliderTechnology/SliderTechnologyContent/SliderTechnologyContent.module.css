@@ -1,5 +1,4 @@
 .tabDescription {
-  margin-top: 37px;
   width: 100%;
   z-index: 1;
 }
@@ -7,14 +6,13 @@
 .title {
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 2.7px;
-  color: var(--secondary-color);
+  color: var(--secondaryw-color);
   margin-bottom: 11px;
 }
 
 .name {
   white-space: nowrap;
-  margin-bottom: 27px;
+  margin-bottom: 17px;
 }
 
 .description {

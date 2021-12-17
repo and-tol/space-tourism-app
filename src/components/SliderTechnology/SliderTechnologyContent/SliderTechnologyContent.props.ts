@@ -3,6 +3,6 @@ import { DataItem, Idx } from '../../../interface/data.interface';
 
 export interface SliderTechnologyContentProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  context: DataItem & Idx;
+  content: DataItem & Idx;
   handlers?: any;
 }
