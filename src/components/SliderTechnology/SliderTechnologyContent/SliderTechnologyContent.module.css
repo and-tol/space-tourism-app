@@ -1,0 +1,41 @@
+.tabDescription {
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--secondaryw-color);
+  margin-bottom: 11px;
+}
+
+.name {
+  white-space: nowrap;
+  margin-bottom: 17px;
+}
+
+.description {
+  max-width: 444px;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 810px) {
+  .tabDescription {
+    text-align: center;
+  }
+  .description {
+    min-width: 100%;
+  }
+  .name {
+    white-space: initial;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabDescription {
+    margin-top: 32px;
+    padding-bottom: 80px;
+  }
+}

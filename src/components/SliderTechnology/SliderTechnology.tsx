@@ -1,10 +1,10 @@
 import React, { useMemo, useReducer } from 'react';
 import cn from 'classnames';
-import { SliderCrewProps } from './SliderCrew.props';
-import { SliderCrewNav } from './SliderCrewNav/SliderCrewNav';
-import { SliderCrewContent } from './SliderCrewContent/SliderCrewContent';
-import { Crew, Idx } from '../../interface/data.interface';
-import styles from './SliderCrew.module.css';
+import { SliderTechnologyProps } from './SliderTechnology.props';
+import { SliderTechnologyNav } from './SliderTechnologyNav/SliderTechnologyNav';
+import { SliderTechnologyContent } from './SliderTechnologyContent/SliderTechnologyContent';
+import { Technology, Idx } from '../../interface/data.interface';
+import styles from './SliderTechnology.module.css';
 
 import { useSwipeable } from 'react-swipeable';
 
@@ -14,16 +14,19 @@ import {
   PREV,
   SliderAction,
   SliderState,
-} from './Slider.types';
+} from '../../interface/Slider.types';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { BroserWindowSizes } from '../../interface/constants.types';
+import { onTechnologyPicOrintation } from '../../helpers/onTechnologyPicOrintation';
 
-export const SliderCrew = ({
+export const SliderTechnology = ({
   data,
   className,
   ...props
-}: SliderCrewProps): JSX.Element => {
-  const slides: (Crew & Idx)[] = useMemo(
+}: SliderTechnologyProps): JSX.Element => {
+  const slides: (Technology & Idx)[] = useMemo(
     () =>
-      data.map((dataItem: Crew, idx: number): Crew & Idx => ({
+      data.map((dataItem: Technology, idx: number): Technology & Idx => ({
         ...dataItem,
         idx,
       })),
@@ -57,14 +60,18 @@ export const SliderCrew = ({
   });
 
   // ---------------- Change Picture
-  const imgPathPNG: string = slides[state.pos].images.png;
-  const imgPathWebP: string = slides[state.pos].images.webp;
+  const { width: windowWidth } = useWindowDimensions();
+  const orientation: string = onTechnologyPicOrintation(windowWidth);
+  const imgPath: string = slides[state.pos].images[orientation];
 
   return (
-    <div className={cn('pageSpaces', styles.gridCrew, className)} {...props}>
+    <div
+      className={cn('pageSpaces', styles.gridTechnology, className)}
+      {...props}
+    >
       {/* Slider Navigation  */}
       {slides && (
-        <SliderCrewNav
+        <SliderTechnologyNav
           position={state.pos}
           slides={slides}
           onTabClick={handleTabClick}
@@ -73,8 +80,8 @@ export const SliderCrew = ({
       )}
 
       {/* Slider Content */}
-      <SliderCrewContent
-        context={slides[state.pos]}
+      <SliderTechnologyContent
+        content={slides[state.pos]}
         handlers={handlersContext}
       />
 
@@ -83,23 +90,13 @@ export const SliderCrew = ({
         className={cn(styles.tabsPictureContainer, 'pic')}
         {...handlersPicture}
       >
-        <picture className={styles.pictureContainer}>
-          <source
-            srcSet={imgPathWebP}
-            type='image/webp'
-            className={cn(styles.pictureFit, styles.image)}
-          />
-          <source
-            srcSet={imgPathPNG}
-            type='image/png'
-            className={cn(styles.pictureFit, styles.image)}
-          />
-          <img
-            src={imgPathPNG}
-            alt=''
-            className={cn(styles.pictureFit, styles.image)}
-          />
-        </picture>
+        {/* <picture className={styles.pictureContainer}> */}
+        <img
+          src={imgPath}
+          alt=''
+          className={cn(styles.pictureFit, styles.image)}
+        />
+        {/* </picture> */}
       </div>
     </div>
   );
@@ -108,7 +105,7 @@ export const SliderCrew = ({
 const initialState: SliderState = {
   pos: 0,
   sliding: false,
-  dir: NEXT
+  dir: NEXT,
 };
 
 function reducer(state: SliderState, action: SliderAction): SliderState {

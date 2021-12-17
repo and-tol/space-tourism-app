@@ -1,0 +1,41 @@
+.menuItem {
+  width: 78px;
+  height: 78px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid rgb(255 255 255 / 25%);
+  border-radius: 78px;
+  color: var(--white);
+
+  font-size: 32px;
+
+  text-align: center;
+
+  transition: var(--transition);
+}
+
+.menuItem:hover {
+  transition: var(--transition);
+  border: 1px solid var(--white);
+}
+
+.menuItem:active,
+.menuItem.active {
+  background-color: var(--white);
+  color: var(--black);
+  opacity: 1;
+  transition: var(--transition);
+}
+
+@media (min-width: 810px) {
+  .menuItem:hover {
+    opacity: 0.5;
+    transition: var(--transition);
+  }
+}
+
+@media (max-width: 500px) {
+  .menuItem {
+    /* padding-bottom: 8px; */
+  }
+}

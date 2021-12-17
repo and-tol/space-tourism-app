@@ -46,6 +46,9 @@ export interface Technology {
 }
 
 export interface TechnologyImages {
-  portrait: string;
-  landscape: string;
+  [key: string]: string;
 }
+// export interface TechnologyImages {
+//   portrait: string;
+//   landscape: string;
+// }

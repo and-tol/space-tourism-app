@@ -6,7 +6,6 @@ export { MenuItem } from './MenuItem/MenuItem';
 export { MenuMobile } from './MenuMobile/MenuMobile';
 export { MobileMenuToggle } from './MobileMenuToggle/MobileMenuToggle';
 export { P } from './P/P';
-// Slider Crew
 export { SliderCrew } from './SliderCrew/SliderCrew';
-// Tabs Destination
+export { SliderTechnology } from './SliderTechnology/SliderTechnology';
 export { Tabs } from './TabsDestination/Tabs';
