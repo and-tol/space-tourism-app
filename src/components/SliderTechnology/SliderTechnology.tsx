@@ -1,9 +1,8 @@
-import React, { useMemo, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import cn from 'classnames';
 import { SliderTechnologyProps } from './SliderTechnology.props';
 import { SliderTechnologyNav } from './SliderTechnologyNav/SliderTechnologyNav';
 import { SliderTechnologyContent } from './SliderTechnologyContent/SliderTechnologyContent';
-import { Technology, Idx } from '../../interface/data.interface';
 import styles from './SliderTechnology.module.css';
 
 import { useSwipeable } from 'react-swipeable';
@@ -16,23 +15,15 @@ import {
   SliderState,
 } from '../../interface/Slider.types';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
-import { BroserWindowSizes } from '../../interface/constants.types';
 import { onTechnologyPicOrintation } from '../../helpers/onTechnologyPicOrintation';
+import { useSlides } from '../../hooks/useSlider';
 
 export const SliderTechnology = ({
   data,
   className,
   ...props
 }: SliderTechnologyProps): JSX.Element => {
-  const slides: (Technology & Idx)[] = useMemo(
-    () =>
-      data.map((dataItem: Technology, idx: number): Technology & Idx => ({
-        ...dataItem,
-        idx,
-      })),
-    [data]
-  );
-  const numSlides: number = slides.length;
+  const { slides, numSlides } = useSlides(data);
 
   // ------ react-swipeable --------
   const [state, dispatch] = useReducer(reducer, initialState);

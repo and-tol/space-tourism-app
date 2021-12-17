@@ -15,21 +15,14 @@ import {
   SliderAction,
   SliderState,
 } from './Slider.types';
+import { useSlides } from '../../hooks/useSlider';
 
 export const SliderCrew = ({
   data,
   className,
   ...props
 }: SliderCrewProps): JSX.Element => {
-  const slides: (Crew & Idx)[] = useMemo(
-    () =>
-      data.map((dataItem: Crew, idx: number): Crew & Idx => ({
-        ...dataItem,
-        idx,
-      })),
-    [data]
-  );
-  const numSlides: number = slides.length;
+  const { slides, numSlides } = useSlides(data);
 
   // ------ react-swipeable --------
   const [state, dispatch] = useReducer(reducer, initialState);
