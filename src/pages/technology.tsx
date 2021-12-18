@@ -51,5 +51,5 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 interface TechnologyPageProps extends Record<string, unknown> {
-  crew: Technology[] | null;
+  technology: Technology[] | null;
 }

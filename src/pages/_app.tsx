@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps & IMenuContext) {
   return (
     <>
       <Meta />
-      <AppContextProvider isMobileMenuView={false}>
+      <AppContextProvider >
         <Component {...pageProps} />
       </AppContextProvider>
     </>

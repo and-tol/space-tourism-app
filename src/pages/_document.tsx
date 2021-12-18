@@ -17,6 +17,7 @@ class MyDocument extends Document {
     return (
       <Html lang='eng'>
         <Head>
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             href='https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@300;400&family=Bellefair&display=swap'
             rel='stylesheet'

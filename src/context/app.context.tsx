@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useContext, useState } from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 export interface IMenuContext {
   isMobileMenuView: boolean;
@@ -7,9 +7,11 @@ export interface IMenuContext {
 
 export const MenuContext = createContext<IMenuContext>(undefined!);
 
-export const AppContextProvider = ({
-  children,
-}: PropsWithChildren<IMenuContext>): JSX.Element => {
+type Props = {
+  children: ReactNode;
+};
+
+export const AppContextProvider = ({ children }: Props): JSX.Element => {
   const [mobileMenuState, setMobileMenuState] = useState<boolean>(false);
 
   const setMobileMenuView = (mobileMenuState: boolean): void => {
