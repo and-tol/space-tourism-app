@@ -13,7 +13,7 @@ export const Meta = () => {
       <title>Space Tourism</title>
       <meta name='keywords' content='space, tourism' />
       <meta name='description' content='All about space tourism' />
-      <link rel='icon' href='/favicon-32x32.png' />
+      <link rel='icon' href='/favicon.svg' />
 
       <link
         rel='preconnect'
