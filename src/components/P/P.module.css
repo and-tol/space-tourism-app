@@ -1,0 +1,21 @@
+.p {
+  font-size: 18px;
+  line-height: 1.7778rem;
+}
+
+@media (max-width: 810px) {
+  .p {
+    font-size: 16px;
+    line-height: 28px;
+
+    transition: var(--transition);
+  }
+}
+@media (max-width: 500px) {
+  .p {
+    font-size: 15px;
+    line-height: 25px;
+
+    transition: var(--transition);
+  }
+}

@@ -1,0 +1,133 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: minmax(450px, 42%) 1fr;
+
+  z-index: 1;
+}
+
+/* --------- */
+.text {
+  position: relative;
+  margin-bottom: 10vh;
+  z-index: 1;
+  align-self: end;
+}
+
+.title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+/* --------- */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10vh;
+  align-self: end;
+  justify-self: end;
+
+  width: 274px;
+  height: 274px;
+  border-radius: 274px;
+
+  font-family: Bellefair, serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--black);
+
+  background-color: var(--white);
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+  width: 270px;
+  height: 270px;
+  box-shadow: 0 0 0 88px rgb(255 255 255 / 10%);
+  transition: all 0.65s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@media (max-width: 810px) {
+  .hero {
+    grid-template-columns: 1fr;
+    transition: var(--transition);
+  }
+  .text {
+    justify-self: center;
+    transition: var(--transition);
+  }
+
+  .subtitle,
+  .title,
+  .info {
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .info {
+    max-width: 444px;
+
+    transition: var(--transition);
+  }
+
+  .button {
+    align-self: initial;
+    justify-self: center;
+
+    width: 242px;
+    height: 242px;
+    border-radius: 242px;
+
+    margin-bottom: 8vh;
+
+    letter-spacing: 2px;
+
+    transition: var(--transition);
+  }
+
+  .button:focus,
+  .button:hover,
+  .button:active {
+    width: 238px;
+    height: 238px;
+    box-shadow: 0 0 0 60px rgb(255 255 255 / 10%);
+    transition: var(--transition);
+  }
+}
+
+@media (max-width: 500px) {
+  .info {
+    max-width: 100%;
+  }
+  .button {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+
+    margin-bottom: 7vh;
+
+    font-size: 20px;
+    letter-spacing: 1.25px;
+
+    transition: var(--transition);
+  }
+  .button:focus,
+  .button:hover,
+  .button:active {
+    width: 146px;
+    height: 146px;
+    box-shadow: 0 0 0 40px rgb(255 255 255 / 10%);
+
+    transition: var(--transition);
+  }
+}

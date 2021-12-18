@@ -1,0 +1,38 @@
+.nav {
+  position: absolute;
+  height: 114vh;
+  top: -40px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  width: 70vw;
+
+  padding-top: 118px;
+  padding-right: var(--padding-mobile);
+
+  background-color: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
+  transform: translateX(101vw);
+  transition: 0.7s;
+}
+
+.open {
+  transform: translateX(45%);
+  transition: 0.7s;
+}
+
+.mobMenuContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
+}
+
+@media (max-width: 320px) {
+  .nav {
+    width: 100vw;
+    left: 0;
+  }
+}

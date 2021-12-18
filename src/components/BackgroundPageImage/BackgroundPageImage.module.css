@@ -1,0 +1,4 @@
+.pic {
+  object-fit: cover;
+  min-height: 0;
+}

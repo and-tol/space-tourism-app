@@ -1,0 +1,25 @@
+.mobMenuCloseContainer {
+  display: none;
+  width: 100%;
+  position: relative;
+  display: none;
+  justify-content: right;
+  z-index: 4;
+}
+
+.mobMenuClose {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobMenuCloseContainer {
+    display: flex;
+  }
+}

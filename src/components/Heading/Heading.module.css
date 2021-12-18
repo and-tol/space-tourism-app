@@ -1,0 +1,79 @@
+.h1 {
+  font-family: Bellefair, serif;
+  font-size: 150px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h2 {
+  font-family: Bellefair, serif;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h3 {
+  font-family: Bellefair, serif;
+  font-size: 56px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.h4 {
+  font-family: Bellefair, serif;
+  font-size: 32px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  line-height: 100%;
+
+  text-transform: uppercase;
+  letter-spacing: 4.725px;
+
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+@media (max-width: 810px) {
+  .h2 {
+    font-size: 80px;
+  }
+  .h3 {
+    font-size: 40px;
+  }
+  .h4 {
+    font-size: 24px;
+  }
+  .h5 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+    transition: var(--transition);
+  }
+}
+@media (max-width: 500px) {
+  .h1 {
+    font-size: 80px;
+    line-height: 100px;
+    transition: var(--transition);
+  }
+  .h3 {
+    font-size: 24px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
+  .h5 {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    transition: var(--transition);
+  }
+}

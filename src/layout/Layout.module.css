@@ -1,0 +1,16 @@
+.mainContainer {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+
+  height: 100vh;
+}
+@media (max-width: 810px) {
+  .mainContainer {
+    overflow-y: initial;
+    overflow-x: hidden;
+    height: auto;
+    padding-bottom: 58px;
+  }
+}
