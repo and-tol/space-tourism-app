@@ -24,6 +24,7 @@ export const MenuMobile = ({
       <nav
         className={cn(styles.nav, { [styles.open]: isMobileMenuView })}
         {...props}
+        aria-label='site navigation on mobile'
       >
         <div className={styles.mobMenuContainer}>
           {menuItems.map((menuItem, idx) => {
