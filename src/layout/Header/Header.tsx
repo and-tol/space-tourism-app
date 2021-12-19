@@ -10,7 +10,7 @@ export const Header = React.memo((): JSX.Element => {
   return (
     <header className={cn(styles.header)}>
       <Link href='/'>
-        <a className={styles.logo}>
+        <a className={styles.logo} area-label='Go to the Home page'>
           <SpaceTourismLogo />
         </a>
       </Link>
