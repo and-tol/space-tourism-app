@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
+import { MetaProps } from './Meta.props';
 
-export const Meta = () => {
+export const Meta = ({ title, description, keywords }: MetaProps): JSX.Element => {
   return (
     <Head>
       <meta charSet='utf-8' key='charset' />
@@ -10,9 +11,9 @@ export const Meta = () => {
         content='width=device-width,initial-scale=1'
         key='viewport'
       />
-      <title>Space Tourism</title>
-      <meta name='keywords' content='space, tourism' />
-      <meta name='description' content='All about space tourism' />
+      <title>Space Tourism | {title}</title>
+      <meta name='keywords' content={keywords} />
+      <meta name='description' content={description} />
       <link rel='icon' href='/favicon.svg' />
 
       <link
@@ -22,4 +23,10 @@ export const Meta = () => {
       />
     </Head>
   );
+};
+
+Meta.defaultProps = {
+  title: 'Home',
+  description: 'All about space tourism',
+  keywords: 'space, tourism',
 };

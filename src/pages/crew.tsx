@@ -1,21 +1,22 @@
 import type { GetStaticProps, NextPage } from 'next';
 import React from 'react';
-import { LayoutCrew } from '../layout';
-
 import bgPicDesktop from '../../public/assets/crew/background-crew-desktop.jpg';
-import bgPicTablet from '../../public/assets/crew/background-crew-tablet.jpg';
 import bgPicMobile from '../../public/assets/crew/background-crew-mobile.jpg';
-
-import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
-
+import bgPicTablet from '../../public/assets/crew/background-crew-tablet.jpg';
 import { BackgroundPageImage, Heading, SliderCrew } from '../components';
-
+import { bgPicUrlsCreator } from '../helpers/bgPicUrlsCreator';
+import { Crew, IData, PageSeo } from '../interface/data.interface';
+import { LayoutCrew, Meta } from '../layout';
 import { getServerData } from '../utils/getServerData';
-import { Crew, IData } from '../interface/data.interface';
 
-const CrewPage: NextPage<CrewPageProps> = ({ crew }) => {
+const CrewPage: NextPage<CrewPageProps> = ({ crew, seo }) => {
   return (
     <>
+      <Meta
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+      />
       <LayoutCrew>
         <Heading tag='h5' className='mainTextColor pageTitle'>
           <span className='pageNum'>02</span>Meet your crew
@@ -44,12 +45,14 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   const crew: Crew[] = data.crew;
+  const seo: PageSeo = data.seo.crew ?? {};
 
   return {
-    props: { crew },
+    props: { crew, seo },
   };
 };
 
 interface CrewPageProps extends Record<string, unknown> {
   crew: Crew[] | null;
+  seo: PageSeo;
 }

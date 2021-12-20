@@ -8,6 +8,11 @@ export interface IData {
   destination: Destination[];
   crew: Crew[];
   technology: Technology[];
+  seo: {
+    destination?: PageSeo;
+    crew?: PageSeo;
+    technology?: PageSeo;
+  };
 }
 
 export interface Crew {
@@ -60,4 +65,10 @@ export interface Technology {
 export interface Slides {
   slides: (DataItem & Idx)[];
   numSlides: number;
+}
+
+export interface PageSeo {
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
